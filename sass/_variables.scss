@@ -1,0 +1,76 @@
+@font-face {
+	font-family: "yekanbakhweb";
+	src: url("fonts/yekanbakh/YekanBakhFaNum-Thin.woff2") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: "yekanbakhweb";
+	src: url("fontsyekanbakh/YekanBakhFaNum-ExtraLight.woff2") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: "yekanbakhweb";
+	src: url("fonts/yekanbakh/YekanBakhFaNum-Light.woff2") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "yekanbakhweb";
+	src: url("fonts/yekanbakh/YekanBakhFaNum-Regular.woff2") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "yekanbakhweb";
+	src: url("fonts/yekanbakh/YekanBakhFaNum-Medium.woff2") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "yekanbakhweb";
+	src: url("fonts/yekanbakh/YekanBakhFaNum-SemiBold.woff2") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "yekanbakhweb";
+	src: url("fonts/yekanbakh/YekanBakhFaNum-Bold.woff2") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "yekanbakhweb";
+	src: url("fonts/yekanbakh/YekanBakhFaNum-ExtraBold.woff2") format("truetype");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: "yekanbakhweb";
+	src: url("fonts/yekanbakh/YekanBakhFaNum-Black.woff2") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+// text colors
+$textColorLight: #4c7a4e;
+$textColorLighter: #7d887b;
+$textColorDarker: #28382d;
+$textColorDark: #455c46;
+
+//main colors
+$mainColor: #F27267;
+$mainColorLight: #f8641d;
+$backColor: #eef6ee;
+
+
+
+
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}  
+}

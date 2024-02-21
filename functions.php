@@ -176,3 +176,56 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function track_post_views() {
+    if (is_single() && !is_bot()) {
+        $post_id = get_the_ID();
+        $views = get_post_meta($post_id, 'post_views', true);
+
+        $user_has_visited = isset($_COOKIE['visited_post_' . $post_id]);
+
+        if (!$user_has_visited) {
+            $views = ($views) ? $views + 1 : 1;
+            update_post_meta($post_id, 'post_views', $views);
+
+            setcookie('visited_post_' . $post_id, 'yes', time() + 24 * 3600, '/');
+        }
+    }
+}
+
+add_action('wp', 'track_post_views');
+
+function is_bot() {
+    $bots = array(
+        'Googlebot',
+        'Bingbot',
+        'Slurp',
+        'DuckDuckBot',
+    );
+
+    foreach ($bots as $bot) {
+        if (stripos($_SERVER['HTTP_USER_AGENT'], $bot) !== false) {
+            return true;
+        }
+    }
+    return false;
+}
+function display_post_views() {
+    $post_id = get_the_ID();
+    $views = get_post_meta($post_id, 'post_views', true);
+    echo ($views ? $views : 0);
+}
+
+
+
+function setPostViews($postID) {
+    $countKey = 'post_views_count';
+    $count = get_post_meta($postID, $countKey, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $countKey);
+        add_post_meta($postID, $countKey, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $countKey, $count);
+    }
+}

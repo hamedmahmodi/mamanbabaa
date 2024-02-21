@@ -1,0 +1,33 @@
+@import 'sass/variables';
+@import 'sass/breakpoints';
+@import 'sass/source';
+
+.breadcrumbs{
+    span {
+        display: inline-block;
+    }
+}
+.SinglePostPage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .commentsAndView{
+        display: flex;
+        background-color: black;
+        border-radius: 30px;
+        padding: 0 10px;
+        div{
+            padding: 10px;
+        }
+        .commentsCount{
+            border-left: 1px solid white;
+        }
+        span , a{
+            color: white !important;
+        }
+    }
+}
+.singlePageMain{
+    display: flex;
+    justify-content: space-between;
+}

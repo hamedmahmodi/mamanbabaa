@@ -1,0 +1,360 @@
+*{
+	box-sizing: border-box;
+	direction: rtl;
+	// overflow-x: hidden !important;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+body{
+    font-family: "yekanbakhweb" !important;
+    margin: 0;
+    direction: rtl !important;
+	overflow-x: hidden !important;
+	width: 100% !important;
+	font-size: 15px;
+    padding: 0;
+}
+.mainView{
+    max-width: 1280px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    @include mvb{
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+}
+h1, h2, h3, h4, h5, h6,input, textarea {
+	font-family: "yekanbakhweb" !important;
+}
+h1, h2, h3, h4, h5, h6{
+    color: $textColorDarker !important;
+}
+h1{
+	font-size: 30px;
+}
+h2{
+	font-size: 27px;
+}
+h3{
+	font-size: 24px;
+}
+h4{
+	font-size: 22px;
+}
+h5{
+	font-size: 20px;
+}
+h6{
+	font-size: 18px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: 800;
+}
+svg{
+	display: block;
+}
+.lowMargined{
+	margin: 7px 0;
+}
+.mediumMargined{
+	margin: 15px 0;
+}
+.highMargined{
+	margin: 30px 0;
+}
+.extraHighMargined{
+	margin: 60px 0;
+}
+.lowPadding{
+	padding: 7px;
+}
+.mediumPadding{
+	padding: 15px;
+}
+.highPadding{
+	padding: 30px;
+}
+.sectionPadding{
+	padding: 50px 0;
+}
+.centeredText{
+	text-align: center;
+}
+.noPadding{
+	padding: 0;
+}
+.noMargin{
+	margin: 0;
+}
+.generalHeading{
+	h1,h2,h3,h4,h5,h6{
+		margin: 0;
+	}
+	span{
+		font-size: 17px;
+		font-weight: 300;
+		margin-top: 5px;
+		display: block;
+	}
+}
+.bigHeading{
+	h1,h2,h3,h4,h5,h6{
+		font-size: 35px;
+	}
+	span{
+		font-size: 18px;
+	}
+}
+.mediumWeight{
+	font-weight: 500;
+}
+p{
+	line-height: 27px;
+	color: $textColorLighter;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.justified{
+	text-align: justify;
+}
+.lightParagraph{
+	font-weight: 300;
+}
+.colorChangeTxt{
+	color: $mainColor;
+}
+.lightText{
+	color: $textColorLight;
+}
+.darkText{
+    color: $textColorDark;
+}
+.smallText{
+	font-size: 13px;
+}
+.smallerText{
+	font-size: 12px;
+}
+.lowRadius{
+	border-radius: 8px;
+}
+.highRadius{
+	border-radius: 15px;
+}
+.bottomBorder{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.darkBorder{
+	border: 1px solid $textColorDarker;
+}
+.lightBorder{
+	border: 1px solid $textColorLighter;
+}
+.lighterBorder{
+	border: 1px solid $backColor;
+}
+button{
+    font-family: "yekanbakhweb" !important;
+	cursor: pointer;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+table{
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+	border: 1px solid $backColor;
+	th{
+		text-align: right;
+		border: 1px solid rgba(13, 84, 131,0.1);
+		padding: 12px;
+	}
+	tr{
+		&:nth-child(2n+1) {
+			background-color: rgba(226, 229, 252,0.3);
+		}
+	}
+	td {
+		font-size: 15px;
+		padding: 8px 4px;
+		font-weight: 400;
+		border: 1px solid rgba(13, 84, 131,0.1);
+		padding: 15px 10px;
+		strong {
+			font-weight: 600;
+		}
+	}
+}
+a,a:visited{
+	text-decoration: none;
+	color: #28382d;
+}
+li{
+	list-style-type: none;
+	margin: 7px 0;
+	position: relative;
+	padding-right: 10px;
+	&::before{
+		content: '';
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		border-radius: 100%;
+		background-color: $mainColor;
+		top: 0;
+		bottom: 0;
+		margin-top: auto;
+		margin-bottom: auto;
+		right: 0;
+	}
+}
+span{
+	display: block;
+	color: $textColorDarker;
+}
+label{
+	display: block;
+	margin-bottom: 15px;
+	font-size: 14px;
+    font-weight: 500;
+	text-align: right;
+	width: 100%;
+	font-family: "yekanbakhweb" !important;
+}
+input{
+	margin-top: 5px;
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	font-family: "yekanbakhweb" !important;
+	&[type=text] , &[type=password] , &[type=email] , &[type=tel] , &[type=url]{
+		border: none;
+		background-color: transparent;
+		color: $textColorDarker;
+		font-size: 14px;
+		border-bottom: 1px solid $textColorDarker;
+		@include placeholder{
+			color: $textColorLighter;
+			opacity: 0.25;
+		}
+	}
+	&[type=checkbox]{
+		width: max-content;
+		margin: 0;
+	}
+	&[type=submit]{
+		background-color: $mainColor;
+		color: #fff;
+		border: none;
+		font-weight: 600;
+		padding: 10px 25px;
+		cursor: pointer;
+		transition: all 0.4s;
+		border-radius: 30px;
+		font-size: 14px;
+		font-family: "yekanbakhweb" !important;
+		width: max-content;
+		&:hover{
+			transform: scale(1.2);;
+		}
+	}
+	&:focus{
+		outline: none;
+	}
+}
+textarea{
+	margin-top: 5px;
+	display: block;
+	width: 100%;
+	height: 100px;
+	padding: 10px 20px;
+	resize: none;
+	background-color: transparent;
+	border: none;
+	color: $textColorDarker;
+	font-size: 14px;
+	border-bottom: 1px solid $textColorDarker;
+	@include placeholder{
+		color: $textColorLighter;
+		opacity: 0.25;
+	}
+	&:focus{
+		outline: none;
+	}
+}
+select{
+	margin-top: 5px;
+	display: block;
+	width: 100%;
+	padding: 15px 10px;
+	border: 1px solid #d5d5d5;
+	font-family: "yekanbakhweb";
+	background-color: transparent;
+	option{
+		font-family: "yekanbakhweb";
+	}
+}
+.generalButton{
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    color: $textColorDarker !important;
+    padding: 7px 15px;
+    font-size: 14.5px;
+    display: block;
+    width: max-content;
+	transition: all 0.4s;
+	border: 1px solid $mainColor;
+	font-weight: 600;
+	cursor: pointer;
+	&:hover{
+		transform: scale(1.2);
+	}
+}
+.bgColor{
+	background-color: $mainColor;
+	color: white !important;
+	border: 1px solid $mainColor;
+}
+.fillButton{
+	background-color: $mainColor;
+	color: #fff !important;
+	border: none;
+	&:hover{
+		transform: scale(1.2);;
+	}
+}
+.borderNoneButton{
+    border: none;
+    color: $textColorDarker !important;
+    background-color: transparent;
+	&:hover{
+		background-color: unset;
+	}
+}
+.alignleft {
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1.5em;
+}
+.lightbg{
+	background-color: $backColor;
+}
