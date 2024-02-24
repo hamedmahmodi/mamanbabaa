@@ -313,6 +313,12 @@
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
             padding: 35px 35px 35px 35px;
             text-align: right;
+            @include sm{
+                width: 70%;
+            }
+            @include xs{
+                width: 100%;
+            }
         }
     }
     .sectionThree{
@@ -323,6 +329,12 @@
             width: 50%;
             padding: 10px;
             text-align: right;
+        }
+        @include sm{
+            flex-direction: column;
+            .sectionThreeText,.sectionThreeImg{
+                width: 100%;
+            }
         }
     }
     .sectionFour{
@@ -336,6 +348,13 @@
                 color: white !important;
                 width: 45%;
                 text-align: right;
+            }
+            @include xs{
+                flex-direction: column;
+                h2{
+                    text-align: center;
+                    width: 80%;
+                }
             }
         }
     }

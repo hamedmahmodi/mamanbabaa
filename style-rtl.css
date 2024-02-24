@@ -808,6 +808,16 @@ select option {
   padding: 35px 35px 35px 35px;
   text-align: right;
 }
+@media screen and (max-width: 768px) {
+  .aboutPagk .sectionTwo .sectionTwoText {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .aboutPagk .sectionTwo .sectionTwoText {
+    width: 100%;
+  }
+}
 .aboutPagk .sectionThree {
   display: flex;
   justify-content: space-between;
@@ -817,6 +827,14 @@ select option {
   width: 50%;
   padding: 10px;
   text-align: right;
+}
+@media screen and (max-width: 768px) {
+  .aboutPagk .sectionThree {
+    flex-direction: column;
+  }
+  .aboutPagk .sectionThree .sectionThreeText, .aboutPagk .sectionThree .sectionThreeImg {
+    width: 100%;
+  }
 }
 .aboutPagk .sectionFour {
   background-color: #025D68;
@@ -831,4 +849,13 @@ select option {
   color: white !important;
   width: 45%;
   text-align: right;
+}
+@media screen and (max-width: 480px) {
+  .aboutPagk .sectionFour .innerSectionFour {
+    flex-direction: column;
+  }
+  .aboutPagk .sectionFour .innerSectionFour h2 {
+    text-align: center;
+    width: 80%;
+  }
 }/*# sourceMappingURL=style-rtl.css.map */
