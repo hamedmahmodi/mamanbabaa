@@ -9,7 +9,7 @@ get_header();
             <h1>درباره ما</h1>
             <span>لورم ایپسوم</span>
         </div>
-    <div class="aboutPagk">
+    <div class="aboutPage">
         <div class="sectionOne mainView">
             <h2>لورم ایپسوم</h2>
             <img src="<?php echo get_template_directory_uri()?>/img/Absolute-Team_v3_1x-1024x410.jpg" alt="" width="80%">

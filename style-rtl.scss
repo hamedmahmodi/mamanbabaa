@@ -289,7 +289,7 @@
         }
     }
 }
-.aboutPagk{
+.aboutPage{
     
     text-align: center;
     .sectionOne{
@@ -355,6 +355,34 @@
                     text-align: center;
                     width: 80%;
                 }
+            }
+        }
+    }
+}
+.contactPage{
+    width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        p{
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+    .form{
+        
+        .innerForm{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            span{
+                width: 49%;
+                @include xs{
+                    width: 100%;
+                }
+            }
+        }
+        @include xs{
+            [type=submit]{
+                width: 100% !important;
             }
         }
     }
