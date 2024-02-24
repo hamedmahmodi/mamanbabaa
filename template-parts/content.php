@@ -16,36 +16,83 @@
 
 ?>
 
-<div class="generalSinglePostStyle singleBox mainView">
+<div class="generalSinglePostStyle singleBox">
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	
 	
 	<header class="entry-header">
-		
-	<div class="SinglePostPageHeader">
-		<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-			yoast_breadcrumb( '<p class="breadcrumbs">','</p>' );
-			}
-		?>
-		<div class="SinglePostPage">
+	</header><!-- .entry-header -->
+
+	<div class="singlePageMain mainView highRadius">
+		<div class="singlePageRightBox">
+			<?php
+				if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb( '<p class="breadcrumbs">','</p>' );
+				}
+			?>
 			<?php
 
-				if ( is_singular() ) :
+			if ( is_singular() ) :
 
-					the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h1 class="entry-title">', '</h1>' );
 
-					else :
+				else :
 
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
-				endif;
+			endif;
 
-				if ( 'post' === get_post_type() ) :
+			if ( 'post' === get_post_type() ) :
 
 			?>
+			<div class="entry-content">
+			
+				<?php
+
+				the_content(
+
+					sprintf(
+
+						wp_kses(
+
+							/* translators: %s: Name of current post. Only visible to screen readers */
+
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'khane_zar' ),
+
+							array(
+
+								'span' => array(
+
+									'class' => array(),
+
+								),
+
+							)
+
+						),
+
+						wp_kses_post( get_the_title() )
+
+					)
+
+				);
+
+				?>
+
+			</div>
+			<div class="shortendedLinkContainer">
+				<h3>لینک کوتاه</h3>
+				<div class="mainShortenedInfo">
+					<span class="theAddressURL"><?php echo get_home_url() ?>/?p=<?php echo get_the_id() ?></span>
+					<input type="button" value="کپی لینک" id="copyLinkButton">
+					
+				</div>
+				<span class="copyLinkMessage">لینک با موفقیت کپی شد</span>
+			</div>
+		</div>
+		<div class="singlePageLeftBox">
 			<div class="commentsAndView">
 				<div class="commentsCount">
 
@@ -56,61 +103,22 @@
 				<span>بازدید : <?php display_post_views(); ?></span>
 				</div>
 			</div>
-		</div>
-	</div>
-	</header><!-- .entry-header -->
-
-	<div class="singlePageMain">
-		<div class="entry-content">
-			
-			<?php
-
-			the_content(
-
-				sprintf(
-
-					wp_kses(
-
-						/* translators: %s: Name of current post. Only visible to screen readers */
-
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'khane_zar' ),
-
-						array(
-
-							'span' => array(
-
-								'class' => array(),
-
-							),
-
-						)
-
-					),
-
-					wp_kses_post( get_the_title() )
-
-				)
-
-			);
-
-			?>
-
-		</div>
-		<div class="mostView">
-			<h2>بیشترین بازدید:</h2>
-			<?php
-				query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
-				if (have_posts()) : while (have_posts()) : the_post();
-				?>
-					<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+			<div class="mostView">
+				<h2>بیشترین بازدید:</h2>
 				<?php
-				endwhile; endif;
-				wp_reset_query();
-				?>
-			<?php endif; ?>
+					query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
+					if (have_posts()) : while (have_posts()) : the_post();
+					?>
+						<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+					<?php
+					endwhile; endif;
+					wp_reset_query();
+					?>
+				<?php endif; ?>
+			</div>
 		</div>
 	</div>
-
+	
 	
 
 </article><!-- #post-<?php the_ID(); ?> -->

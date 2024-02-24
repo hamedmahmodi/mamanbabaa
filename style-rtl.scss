@@ -2,15 +2,24 @@
 @import 'sass/breakpoints';
 @import 'sass/source';
 
-.breadcrumbs{
-    span {
-        display: inline-block;
-    }
+
+.entry-header{
+    width: 100%;
+    height: 240px;
+    background-color: #008055;
 }
-.SinglePostPage{
+.singlePageMain{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    background-color: white;
+    transform: translateY(-180px);
+    padding: 60px;
+    .breadcrumbs{
+        span {
+            display: inline-block;
+        }
+    }
     .commentsAndView{
         display: flex;
         background-color: black;
@@ -26,8 +35,249 @@
             color: white !important;
         }
     }
+    .singlePageRightBox{
+        width: 70%;
+        .shortendedLinkContainer{
+            background-color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 0;
+            @include xxs{
+                padding: 0;
+            }
+            h3{
+                font-size: 14px;
+                font-weight: 800;
+                color: #002d64;
+                margin: 5px 0 15px 0;
+            }
+            .mainShortenedInfo{	
+                position: relative;
+                width: max-content;
+                border-radius: 7px;
+                overflow: hidden;
+                display: flex;
+                @include xxs{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                .theAddressURL{
+                    font-size: 14px;
+                    font-weight: 400;
+                    display: inline-block;
+                    background-color: #ededed;
+                    padding: 10px 20px;
+                    @include xxs{
+                        width: 65%;
+                        padding: 5px;
+                    }
+                }
+                input{
+                    &[type=button]{
+                        background-color: $mainColor;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 15px;
+                        cursor: pointer;
+                        @include xxs{
+                            width: 35%;
+                            padding: 5px;
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+        .copyLinkMessage{
+            font-size: 13px;
+            position: absolute;
+            right: 383px;
+            width: max-content;
+            background-color: #e1efff;
+            padding: 5px 10px;
+            margin-top: auto;
+            margin-bottom: auto;
+            bottom: 85px;
+            height: max-content;
+            color: #3e4751;
+            display: none;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-left: 8px solid #e1efff;
+                left: 100%;
+                top: 0;
+                bottom: 0;
+                margin-top: auto;
+                margin-bottom: auto;
+                @include sm{
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 8px solid #e1efff;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            @include sm{
+                right: auto;
+                left: 0;
+                top: auto;
+                bottom: calc(100% + 15px);
+            }
+        }
+    }
+    .singlePageLeftBox{
+        margin-top: 50px;
+        position: sticky;
+            height: max-content;
+            bottom: auto;
+            top: 230px;
+        .mostView{
+            
+        }
+    }
+    @include sm{
+        flex-direction: column;
+        .singlePageRightBox{
+            width: 100%;
+        }
+    }
 }
-.singlePageMain{
-    display: flex;
-    justify-content: space-between;
+.comments-area{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    max-width: 1180px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    @include mvb{
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+    .innerComments{
+        width: 70%;
+        @include sm{
+            width: 100%;
+        }
+    }
+    a , a:visited{
+        font-weight: bold;
+        transition: all 0.3s;
+        &:hover{
+            color: #7c510d;
+        }
+    }
+    .comment-reply-title{
+        font-size: 13px;
+        font-weight: bold;
+        color: $mainColor !important;
+        text-align: center;
+        padding: 7px 0;
+        margin: 5px 0;
+        border-radius: 7px;
+    }
+    .form-submit{
+        input{
+            &[type=submit]{
+                font-size: 13px;
+                font-weight: bold;
+                background-color: $mainColor;
+                color: #fff;
+                border: none;
+                padding: 8px 20px;
+                border-radius: 7px;
+            }
+        }
+        
+    }
+    .comment-form{
+        p{
+            line-height: 35px !important;
+        }
+    }
+    form{
+        font-size: 13px;
+        padding: 5px 15px;
+        border: 1px solid #CECECE;
+        background-color: #fff;
+        border-radius: 7px;
+        label{
+            display: block;
+            font-size: 12px;
+            margin-bottom: 3px;
+        }
+        input{
+            &[type=text] , &[type=email] , &[type=url]{
+                background-color: #fff;
+                border: none;
+                width: 100%;
+                padding: 7px;
+                border: 1px solid #CECECE;
+                border-radius: 7px;
+            }
+        }
+        textarea{
+            background-color: #fff;
+            border: none;
+            width: 100%;
+            padding: 7px;
+            resize: none;
+            border: 1px solid #CECECE;
+            border-radius: 7px;
+        }
+        .comment-form-cookies-consent{
+            display: flex;
+        }
+    }
+}
+.comment-list{
+    list-style-type: none;
+    margin-right: 0;
+    padding-right: 0;
+    .says{
+        margin-right: 3px;
+    }
+    li{
+        &::before{
+            content: none;
+        }
+    }
+    article{
+        background-color: #fff;
+        padding: 10px;
+        font-size: 13px;
+        border: 1px solid #CECECE;
+        border-radius: 7px;
+        margin-bottom: 5px;
+        a , a:visited{
+            font-weight: bold;
+            transition: all 0.3s;
+            &:hover{
+                color: #7c510d;
+            }
+        }
+    }
+    ol{
+        list-style-type: none;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .comment-author{
+        display: flex;
+        align-items: center;
+        img{
+            border-radius: 100%;
+            margin-left: 5px;
+        }
+    }
 }

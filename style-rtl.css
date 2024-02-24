@@ -70,7 +70,7 @@ body {
 }
 
 .mainView {
-  max-width: 1280px;
+  max-width: 1180px;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -323,7 +323,6 @@ label {
 }
 
 input {
-  margin-top: 5px;
   display: block;
   width: 100%;
   padding: 10px 20px;
@@ -491,32 +490,286 @@ select option {
   background-color: #eef6ee;
 }
 
-.breadcrumbs span {
-  display: inline-block;
-}
-
-.SinglePostPage {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.SinglePostPage .commentsAndView {
-  display: flex;
-  background-color: black;
-  border-radius: 30px;
-  padding: 0 10px;
-}
-.SinglePostPage .commentsAndView div {
-  padding: 10px;
-}
-.SinglePostPage .commentsAndView .commentsCount {
-  border-left: 1px solid white;
-}
-.SinglePostPage .commentsAndView span, .SinglePostPage .commentsAndView a {
-  color: white !important;
+.entry-header {
+  width: 100%;
+  height: 240px;
+  background-color: #008055;
 }
 
 .singlePageMain {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+  transform: translateY(-180px);
+  padding: 60px;
+}
+.singlePageMain .breadcrumbs span {
+  display: inline-block;
+}
+.singlePageMain .commentsAndView {
+  display: flex;
+  background-color: black;
+  border-radius: 30px;
+  padding: 0 10px;
+}
+.singlePageMain .commentsAndView div {
+  padding: 10px;
+}
+.singlePageMain .commentsAndView .commentsCount {
+  border-left: 1px solid white;
+}
+.singlePageMain .commentsAndView span, .singlePageMain .commentsAndView a {
+  color: white !important;
+}
+.singlePageMain .singlePageRightBox {
+  width: 70%;
+}
+.singlePageMain .singlePageRightBox .shortendedLinkContainer {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 0;
+}
+@media screen and (max-width: 380px) {
+  .singlePageMain .singlePageRightBox .shortendedLinkContainer {
+    padding: 0;
+  }
+}
+.singlePageMain .singlePageRightBox .shortendedLinkContainer h3 {
+  font-size: 14px;
+  font-weight: 800;
+  color: #002d64;
+  margin: 5px 0 15px 0;
+}
+.singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+}
+@media screen and (max-width: 380px) {
+  .singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo .theAddressURL {
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  background-color: #ededed;
+  padding: 10px 20px;
+}
+@media screen and (max-width: 380px) {
+  .singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo .theAddressURL {
+    width: 65%;
+    padding: 5px;
+  }
+}
+.singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo input[type=button] {
+  background-color: #F27267;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+@media screen and (max-width: 380px) {
+  .singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo input[type=button] {
+    width: 35%;
+    padding: 5px;
+  }
+}
+.singlePageMain .singlePageRightBox .copyLinkMessage {
+  font-size: 13px;
+  position: absolute;
+  right: 383px;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #e1efff;
+  padding: 5px 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  bottom: 85px;
+  height: -moz-max-content;
+  height: max-content;
+  color: #3e4751;
+  display: none;
+}
+.singlePageMain .singlePageRightBox .copyLinkMessage::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid #e1efff;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 768px) {
+  .singlePageMain .singlePageRightBox .copyLinkMessage::before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid #e1efff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .singlePageMain .singlePageRightBox .copyLinkMessage {
+    right: auto;
+    left: 0;
+    top: auto;
+    bottom: calc(100% + 15px);
+  }
+}
+.singlePageMain .singlePageLeftBox {
+  margin-top: 50px;
+  position: sticky;
+  height: -moz-max-content;
+  height: max-content;
+  bottom: auto;
+  top: 230px;
+}
+@media screen and (max-width: 768px) {
+  .singlePageMain {
+    flex-direction: column;
+  }
+  .singlePageMain .singlePageRightBox {
+    width: 100%;
+  }
+}
+
+.comments-area {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 7px;
+  max-width: 1180px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+@media screen and (max-width: 1280px) {
+  .comments-area {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+}
+.comments-area .innerComments {
+  width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .comments-area .innerComments {
+    width: 100%;
+  }
+}
+.comments-area a, .comments-area a:visited {
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.comments-area a:hover, .comments-area a:visited:hover {
+  color: #7c510d;
+}
+.comments-area .comment-reply-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #F27267 !important;
+  text-align: center;
+  padding: 7px 0;
+  margin: 5px 0;
+  border-radius: 7px;
+}
+.comments-area .form-submit input[type=submit] {
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #F27267;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 7px;
+}
+.comments-area .comment-form p {
+  line-height: 35px !important;
+}
+.comments-area form {
+  font-size: 13px;
+  padding: 5px 15px;
+  border: 1px solid #CECECE;
+  background-color: #fff;
+  border-radius: 7px;
+}
+.comments-area form label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.comments-area form input[type=text], .comments-area form input[type=email], .comments-area form input[type=url] {
+  background-color: #fff;
+  border: none;
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #CECECE;
+  border-radius: 7px;
+}
+.comments-area form textarea {
+  background-color: #fff;
+  border: none;
+  width: 100%;
+  padding: 7px;
+  resize: none;
+  border: 1px solid #CECECE;
+  border-radius: 7px;
+}
+.comments-area form .comment-form-cookies-consent {
+  display: flex;
+}
+
+.comment-list {
+  list-style-type: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+.comment-list .says {
+  margin-right: 3px;
+}
+.comment-list li::before {
+  content: none;
+}
+.comment-list article {
+  background-color: #fff;
+  padding: 10px;
+  font-size: 13px;
+  border: 1px solid #CECECE;
+  border-radius: 7px;
+  margin-bottom: 5px;
+}
+.comment-list article a, .comment-list article a:visited {
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.comment-list article a:hover, .comment-list article a:visited:hover {
+  color: #7c510d;
+}
+.comment-list ol {
+  list-style-type: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+.comment-list .comment-author {
+  display: flex;
+  align-items: center;
+}
+.comment-list .comment-author img {
+  border-radius: 100%;
+  margin-left: 5px;
 }/*# sourceMappingURL=style-rtl.css.map */

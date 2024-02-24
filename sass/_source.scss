@@ -15,7 +15,7 @@ body{
     padding: 0;
 }
 .mainView{
-    max-width: 1280px;
+    max-width: 1180px;
     margin-left: auto !important;
     margin-right: auto !important;
     @include mvb{
@@ -226,7 +226,6 @@ label{
 	font-family: "yekanbakhweb" !important;
 }
 input{
-	margin-top: 5px;
 	display: block;
 	width: 100%;
 	padding: 10px 20px;

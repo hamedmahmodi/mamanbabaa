@@ -54,7 +54,16 @@
 				'after'  => '</div>',
 			)
 		);
+		
 		?>
+		<div class="shortendedLinkContainer">
+		<h3>لینک کوتاه</h3>
+		<div class="mainShortenedInfo">
+			<span class="theAddressURL"><?php echo get_home_url() ?>/?p=<?php echo get_the_id() ?></span>
+			<input type="button" value="کپی لینک" id="copyLinkButton">
+			<span class="copyLinkMessage">لینک با موفقیت کپی شد</span>
+		</div>
+	</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
