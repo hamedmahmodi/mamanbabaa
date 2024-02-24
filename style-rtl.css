@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 h2 {
@@ -244,7 +244,7 @@ p {
 }
 
 .lighterBorder {
-  border: 1px solid #eef6ee;
+  border: 1px solid #025D68;
 }
 
 button {
@@ -261,7 +261,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  border: 1px solid #eef6ee;
+  border: 1px solid #025D68;
 }
 table th {
   text-align: right;
@@ -371,7 +371,7 @@ input[type=submit] {
   width: max-content;
 }
 input[type=submit]:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 input:focus {
   outline: none;
@@ -439,7 +439,7 @@ select option {
   cursor: pointer;
 }
 .generalButton:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .bgColor {
@@ -487,13 +487,21 @@ select option {
 }
 
 .lightbg {
-  background-color: #eef6ee;
+  background-color: #025D68;
 }
 
 .entry-header {
   width: 100%;
   height: 240px;
-  background-color: #008055;
+  background-color: #025D68;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.entry-header h1, .entry-header span {
+  color: white !important;
 }
 
 .singlePageMain {
@@ -772,4 +780,55 @@ select option {
 .comment-list .comment-author img {
   border-radius: 100%;
   margin-left: 5px;
+}
+
+.aboutPagk {
+  text-align: center;
+}
+.aboutPagk .sectionOne {
+  margin: 50px 100px;
+}
+.aboutPagk .sectionOne p {
+  width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+.aboutPagk .sectionTwo {
+  background-color: #FFFFFF;
+  background-image: url(https://absolutecarehealth.com.au/wp-content/uploads/2023/03/Community-engagement-cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 150px 0px 150px 0px;
+}
+.aboutPagk .sectionTwo .sectionTwoText {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.7803921569);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  padding: 35px 35px 35px 35px;
+  text-align: right;
+}
+.aboutPagk .sectionThree {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
+}
+.aboutPagk .sectionThree .sectionThreeText, .aboutPagk .sectionThree .sectionThreeImg {
+  width: 50%;
+  padding: 10px;
+  text-align: right;
+}
+.aboutPagk .sectionFour {
+  background-color: #025D68;
+}
+.aboutPagk .sectionFour .innerSectionFour {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0px 50px 0px;
+}
+.aboutPagk .sectionFour .innerSectionFour h2 {
+  color: white !important;
+  width: 45%;
+  text-align: right;
 }/*# sourceMappingURL=style-rtl.css.map */
