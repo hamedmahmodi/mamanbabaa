@@ -19,7 +19,7 @@
 @font-face {
   font-family: "yekanbakhweb";
   src: url("fonts/yekanbakh/YekanBakhFaNum-Regular.woff2") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -37,7 +37,7 @@
 @font-face {
   font-family: "yekanbakhweb";
   src: url("fonts/yekanbakh/YekanBakhFaNum-Bold.woff2") format("truetype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -531,6 +531,8 @@ select option {
   display: inline-block;
 }
 .singlePageMain .commentsAndView {
+  width: -moz-max-content;
+  width: max-content;
   display: flex;
   background-color: black;
   border-radius: 30px;
@@ -547,6 +549,9 @@ select option {
 }
 .singlePageMain .singlePageRightBox {
   width: 70%;
+}
+.singlePageMain .singlePageRightBox img {
+  border-radius: 15px;
 }
 .singlePageMain .singlePageRightBox .shortendedLinkContainer {
   background-color: #fff;
@@ -595,11 +600,20 @@ select option {
   }
 }
 .singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo input[type=button] {
-  background-color: #F27267;
-  color: #fff;
+  background-color: #EDEDED;
+  color: black;
   border: none;
   padding: 10px 15px;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.3s;
+  border-right: 3px solid white;
   cursor: pointer;
+}
+.singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo input[type=button]:hover {
+  border-right: 3px solid #F27267;
+  background-color: #F27267;
+  color: #fff;
 }
 @media screen and (max-width: 380px) {
   .singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo input[type=button] {
@@ -610,14 +624,14 @@ select option {
 .singlePageMain .singlePageRightBox .copyLinkMessage {
   font-size: 13px;
   position: absolute;
-  right: 383px;
+  right: 432px;
   width: -moz-max-content;
   width: max-content;
   background-color: #e1efff;
   padding: 5px 10px;
   margin-top: auto;
   margin-bottom: auto;
-  bottom: 85px;
+  bottom: 75px;
   height: -moz-max-content;
   height: max-content;
   color: #3e4751;
@@ -665,6 +679,12 @@ select option {
   bottom: auto;
   top: 230px;
 }
+.singlePageMain .singlePageLeftBox .mostView li {
+  max-width: 25ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @media screen and (max-width: 768px) {
   .singlePageMain {
     flex-direction: column;
@@ -688,8 +708,14 @@ select option {
     padding-left: 15px !important;
   }
 }
+.comments-area .comment-body, .comments-area .comment-form {
+  border-radius: 15px;
+}
 .comments-area .innerComments {
   width: 70%;
+}
+.comments-area .innerComments h4 {
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .comments-area .innerComments {
@@ -697,15 +723,18 @@ select option {
   }
 }
 .comments-area a, .comments-area a:visited {
-  font-weight: bold;
+  font-weight: 700;
   transition: all 0.3s;
 }
 .comments-area a:hover, .comments-area a:visited:hover {
   color: #7c510d;
 }
+.comments-area .required, .comments-area .required-field-message {
+  display: none;
+}
 .comments-area .comment-reply-title {
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 700;
   color: #F27267 !important;
   text-align: center;
   padding: 7px 0;
@@ -714,12 +743,15 @@ select option {
 }
 .comments-area .form-submit input[type=submit] {
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 700;
   background-color: #F27267;
   color: #fff;
   border: none;
   padding: 8px 20px;
   border-radius: 7px;
+}
+.comments-area .comment-form {
+  box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.08);
 }
 .comments-area .comment-form p {
   line-height: 35px !important;
@@ -727,7 +759,6 @@ select option {
 .comments-area form {
   font-size: 13px;
   padding: 5px 15px;
-  border: 1px solid #CECECE;
   background-color: #fff;
   border-radius: 7px;
 }
@@ -745,16 +776,36 @@ select option {
   border-radius: 7px;
 }
 .comments-area form textarea {
-  background-color: #fff;
+  background-color: #EDEDED;
   border: none;
   width: 100%;
   padding: 7px;
   resize: none;
-  border: 1px solid #CECECE;
-  border-radius: 7px;
+  border-radius: 15px;
 }
 .comments-area form .comment-form-cookies-consent {
   display: flex;
+}
+.comments-area .comment-form-comment label {
+  font-size: 15px;
+  font-weight: 700;
+}
+.comments-area .comment-form-comment textarea {
+  margin-top: 5px;
+}
+.comments-area .comment-content {
+  margin: 10px 0;
+}
+.comments-area .comment-content p {
+  margin: 0;
+}
+.comments-area .comment-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comments-area .comment-meta .edit-link {
+  display: none;
 }
 
 .comment-list {
@@ -765,6 +816,10 @@ select option {
 .comment-list .says {
   margin-right: 3px;
 }
+.comment-list li {
+  box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+}
 .comment-list li::before {
   content: none;
 }
@@ -772,12 +827,11 @@ select option {
   background-color: #fff;
   padding: 10px;
   font-size: 13px;
-  border: 1px solid #CECECE;
   border-radius: 7px;
   margin-bottom: 5px;
 }
 .comment-list article a, .comment-list article a:visited {
-  font-weight: bold;
+  font-weight: 700;
   transition: all 0.3s;
 }
 .comment-list article a:hover, .comment-list article a:visited:hover {
@@ -901,4 +955,8 @@ select option {
   .contactPage .form [type=submit] {
     width: 100% !important;
   }
+}
+
+.children li {
+  box-shadow: none;
 }/*# sourceMappingURL=style-rtl.css.map */

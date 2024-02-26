@@ -29,6 +29,7 @@
         }
     }
     .commentsAndView{
+        width: max-content;
         display: flex;
         background-color: black;
         border-radius: 30px;
@@ -45,6 +46,9 @@
     }
     .singlePageRightBox{
         width: 70%;
+        img{
+            border-radius: 15px;
+        }
         .shortendedLinkContainer{
             background-color: #fff;
             padding: 10px;
@@ -59,6 +63,7 @@
                 color: #002d64;
                 margin: 5px 0 15px 0;
             }
+            
             .mainShortenedInfo{	
                 position: relative;
                 width: max-content;
@@ -84,10 +89,19 @@
                 }
                 input{
                     &[type=button]{
-                        background-color: $mainColor;
-                        color: #fff;
+                        background-color: #EDEDED;
+                        color: black;
+                        
                         border: none;
                         padding: 10px 15px;
+                        width: max-content;
+                        transition: .3s;
+                        border-right: 3px solid white;
+                        &:hover{
+                            border-right: 3px solid $mainColor;
+                            background-color: $mainColor;
+                            color: #fff;
+                        }
                         cursor: pointer;
                         @include xxs{
                             width: 35%;
@@ -102,13 +116,13 @@
         .copyLinkMessage{
             font-size: 13px;
             position: absolute;
-            right: 383px;
+            right: 432px;
             width: max-content;
             background-color: #e1efff;
             padding: 5px 10px;
             margin-top: auto;
             margin-bottom: auto;
-            bottom: 85px;
+            bottom: 75px;
             height: max-content;
             color: #3e4751;
             display: none;
@@ -151,7 +165,12 @@
             bottom: auto;
             top: 230px;
         .mostView{
-            
+            li{
+                max-width: 25ch;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
         }
     }
     @include sm{
@@ -172,22 +191,30 @@
         padding-right: 15px !important;
         padding-left: 15px !important;
     }
+    .comment-body , .comment-form{
+        border-radius: 15px;
+    }
+    
     .innerComments{
         width: 70%;
+        h4{
+            text-align: center;
+        }
         @include sm{
             width: 100%;
         }
     }
     a , a:visited{
-        font-weight: bold;
+        font-weight: 700;
         transition: all 0.3s;
         &:hover{
             color: #7c510d;
         }
     }
+    .required , .required-field-message{display: none;}
     .comment-reply-title{
         font-size: 13px;
-        font-weight: bold;
+        font-weight: 700;
         color: $mainColor !important;
         text-align: center;
         padding: 7px 0;
@@ -198,7 +225,7 @@
         input{
             &[type=submit]{
                 font-size: 13px;
-                font-weight: bold;
+                font-weight: 700;
                 background-color: $mainColor;
                 color: #fff;
                 border: none;
@@ -209,6 +236,9 @@
         
     }
     .comment-form{
+        -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.08);
+        -moz-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.08);
         p{
             line-height: 35px !important;
         }
@@ -216,7 +246,6 @@
     form{
         font-size: 13px;
         padding: 5px 15px;
-        border: 1px solid #CECECE;
         background-color: #fff;
         border-radius: 7px;
         label{
@@ -235,19 +264,43 @@
             }
         }
         textarea{
-            background-color: #fff;
+            background-color: #EDEDED;
             border: none;
             width: 100%;
             padding: 7px;
             resize: none;
-            border: 1px solid #CECECE;
-            border-radius: 7px;
+            border-radius: 15px;
+            
         }
         .comment-form-cookies-consent{
             display: flex;
         }
     }
+    .comment-form-comment{
+        label{
+            font-size: 15px;
+            font-weight: 700;
+        }
+        textarea{
+            margin-top: 5px;
+        }
+    }
+    .comment-content{
+        margin: 10px 0;
+        p{
+            margin: 0;
+        }
+    }
+    .comment-meta{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .edit-link{
+            display: none;
+        }
+    }
 }
+
 .comment-list{
     list-style-type: none;
     margin-right: 0;
@@ -259,16 +312,21 @@
         &::before{
             content: none;
         }
+        -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.08);
+        -moz-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.08);
+        border-radius: 15px;
     }
+    
     article{
         background-color: #fff;
         padding: 10px;
         font-size: 13px;
-        border: 1px solid #CECECE;
         border-radius: 7px;
         margin-bottom: 5px;
+        
         a , a:visited{
-            font-weight: bold;
+            font-weight: 700;
             transition: all 0.3s;
             &:hover{
                 color: #7c510d;
@@ -385,5 +443,10 @@
                 width: 100% !important;
             }
         }
+    }
+}
+.children{
+    li{
+        box-shadow: none;
     }
 }
