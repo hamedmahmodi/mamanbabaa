@@ -240,7 +240,7 @@ input{
 		background-color: #EDEDED;
 		border: none;
 		border-radius: 8px;
-		margin-top: 20px;
+		margin-top: 0px;
 		@include placeholder{
 			color: $textColorLighter;
 			opacity: 1;
@@ -251,20 +251,20 @@ input{
 		margin: 0;
 	}
 	&[type=submit]{
-		font-weight: 600;
-		cursor: pointer;
-		transition: all 0.4s;
+		font-weight: 600 !important;
+		cursor: pointer !important;
+		transition: all 0.4s !important;
 		font-family: "yekanbakhweb" !important;
-		width: max-content;
-		font-size: 13px;
-		background-color: $mainColor;
-		color: #fff;
-		padding: 8px 20px;
-		border-radius: 7px;
-		border: none;
-		margin-top: 20px;
+		width: max-content !important;
+		font-size: 13px !important;
+		background-color: $mainColor !important;
+		color: #fff !important;
+		padding: 8px 20px !important;
+		border-radius: 7px !important;
+		border: none !important;
+		margin-top: 20px !important;
 		&:hover{
-			transform: scale(1.1);;
+			transform: scale(1.1) !important;
 		}
 	}
 	&:focus{
