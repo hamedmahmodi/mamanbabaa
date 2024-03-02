@@ -264,3 +264,10 @@ function bbloomer_display_quantity_minus() {
 }
 // remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt' , 20);
 // add_action('woocommerce_after_single_product_summary', 'woocommerce_template_single_excerpt' , 15);
+
+add_action( 'wp', 'mageplaza_remove_sidebar_product_pages' );
+function mageplaza_remove_sidebar_product_pages() {
+  if ( is_product() ) {
+  remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+  }
+}
