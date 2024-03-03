@@ -316,7 +316,7 @@ label {
   display: block;
   margin-bottom: 15px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   text-align: right;
   width: 100%;
   font-family: "yekanbakhweb" !important;
@@ -328,7 +328,7 @@ input {
   padding: 10px 20px;
   font-family: "yekanbakhweb" !important;
 }
-input[type=text], input[type=password], input[type=email], input[type=tel], input[type=url] {
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type=url], input[type=date] {
   border: none;
   background-color: transparent;
   color: #28382d;
@@ -340,19 +340,19 @@ input[type=text], input[type=password], input[type=email], input[type=tel], inpu
   border-radius: 8px;
   margin-top: 0px;
 }
-input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, input[type=url]::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, input[type=url]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder {
   color: #7d887b;
   opacity: 1;
 }
-input[type=text]:-moz-placeholder, input[type=password]:-moz-placeholder, input[type=email]:-moz-placeholder, input[type=tel]:-moz-placeholder, input[type=url]:-moz-placeholder {
+input[type=text]:-moz-placeholder, input[type=password]:-moz-placeholder, input[type=email]:-moz-placeholder, input[type=tel]:-moz-placeholder, input[type=url]:-moz-placeholder, input[type=date]:-moz-placeholder {
   color: #7d887b;
   opacity: 1;
 }
-input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=url]::-moz-placeholder {
+input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=date]::-moz-placeholder {
   color: #7d887b;
   opacity: 1;
 }
-input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=url]:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=url]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder {
   color: #7d887b;
   opacity: 1;
 }
@@ -503,6 +503,10 @@ select option {
 
 .lightbg {
   background-color: #025D68;
+}
+
+.show {
+  display: inline-block !important;
 }
 
 .entry-header {
@@ -1319,4 +1323,19 @@ select option {
 
 .comment-form-comment textarea {
   margin-top: 5px;
+}
+
+.servicePage input {
+  display: inline-block;
+  width: 49%;
+}
+.servicePage label {
+  margin: 0 !important;
+}
+.servicePage span {
+  display: flex !important;
+  width: 50%;
+}
+.servicePage .tellTwo, .servicePage .fNameSomeOne, .servicePage .lNameSomeOne, .servicePage .relationship {
+  display: none;
 }/*# sourceMappingURL=style-rtl.css.map */

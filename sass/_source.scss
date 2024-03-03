@@ -220,7 +220,7 @@ label{
 	display: block;
 	margin-bottom: 15px;
 	font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
 	text-align: right;
 	width: 100%;
 	font-family: "yekanbakhweb" !important;
@@ -230,7 +230,7 @@ input{
 	width: 100%;
 	padding: 10px 20px;
 	font-family: "yekanbakhweb" !important;
-	&[type=text] , &[type=password] , &[type=email] , &[type=tel] , &[type=url]{
+	&[type=text] , &[type=password] , &[type=email] , &[type=tel] , &[type=url] ,&[type=date]{
 		border: none;
 		background-color: transparent;
 		color: $textColorDarker;
