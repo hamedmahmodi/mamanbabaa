@@ -202,7 +202,7 @@ p {
 }
 
 .colorChangeTxt {
-  color: #F27267;
+  color: #40E0D0;
 }
 
 .lightText {
@@ -299,7 +299,7 @@ li::before {
   width: 6px;
   height: 6px;
   border-radius: 100%;
-  background-color: #F27267;
+  background-color: #40E0D0;
   top: 0;
   bottom: 0;
   margin-top: auto;
@@ -369,7 +369,7 @@ input[type=submit] {
   width: -moz-max-content !important;
   width: max-content !important;
   font-size: 13px !important;
-  background-color: #F27267 !important;
+  background-color: #40E0D0 !important;
   color: #fff !important;
   padding: 8px 20px !important;
   border-radius: 7px !important;
@@ -449,7 +449,7 @@ select option {
   width: -moz-max-content;
   width: max-content;
   transition: all 0.4s;
-  border: 1px solid #F27267;
+  border: 1px solid #40E0D0;
   font-weight: 600;
   cursor: pointer;
 }
@@ -458,13 +458,13 @@ select option {
 }
 
 .bgColor {
-  background-color: #F27267;
+  background-color: #40E0D0;
   color: white !important;
-  border: 1px solid #F27267;
+  border: 1px solid #40E0D0;
 }
 
 .fillButton {
-  background-color: #F27267;
+  background-color: #40E0D0;
   color: #fff !important;
   border: none;
 }
@@ -615,8 +615,8 @@ select option {
   cursor: pointer;
 }
 .singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo input[type=button]:hover {
-  border-right: 3px solid #F27267;
-  background-color: #F27267;
+  border-right: 3px solid #40E0D0;
+  background-color: #40E0D0;
   color: #fff;
 }
 @media screen and (max-width: 380px) {
@@ -739,7 +739,7 @@ select option {
 .comments-area .comment-reply-title {
   font-size: 13px;
   font-weight: 700;
-  color: #F27267 !important;
+  color: #40E0D0 !important;
   text-align: center;
   padding: 7px 0;
   margin: 5px 0;
@@ -753,7 +753,7 @@ select option {
 .comments-area .form-submit input[type=submit] {
   font-size: 13px;
   font-weight: 700;
-  background-color: #F27267;
+  background-color: #40E0D0;
   color: #fff;
   border: none;
   padding: 8px 20px;
@@ -965,6 +965,7 @@ select option {
 }
 .contactPage .form .innerForm span {
   width: 49%;
+  margin-top: 20px;
 }
 @media screen and (max-width: 480px) {
   .contactPage .form .innerForm span {
@@ -974,6 +975,11 @@ select option {
 @media screen and (max-width: 480px) {
   .contactPage .form [type=submit] {
     width: 100% !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .contactPage {
+    width: 100%;
   }
 }
 
@@ -993,6 +999,13 @@ select option {
 }
 .singleProduct li::before {
   content: none !important;
+}
+.singleProduct .product-price {
+  flex-direction: column !important;
+  font-size: 14px !important;
+}
+.singleProduct .woocommerce-Price-currencySymbol {
+  display: inline-block;
 }
 .singleProduct .product {
   width: 75%;
@@ -1039,14 +1052,22 @@ select option {
 .singleProduct .product .entry-summary .cart {
   display: flex;
 }
+.singleProduct .product .entry-summary .product_meta a {
+  color: #40E0D0;
+}
 .singleProduct .product .entry-summary .quantity {
   position: relative;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.28) !important;
+  background-color: transparent !important;
+  border-radius: 30px;
+  margin-left: 15px !important;
 }
 .singleProduct .product .entry-summary .quantity .qty {
   width: 100px !important;
   border-radius: 30px;
   font-size: 20px;
   padding: 5px 20px !important;
+  border: none;
 }
 .singleProduct .product .entry-summary .quantity .themeCustomPlus, .singleProduct .product .entry-summary .quantity .themeCustomMinus {
   border: none;
@@ -1064,6 +1085,10 @@ select option {
   top: 0;
   bottom: 0;
   left: 14%;
+}
+.singleProduct .product .entry-summary .single_add_to_cart_button {
+  background-color: #40E0D0 !important;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.28) !important;
 }
 .singleProduct .star-rating span::before {
   color: rgb(231, 199, 19) !important;
@@ -1083,7 +1108,24 @@ select option {
   width: 23%;
 }
 .singleProduct .singleProductLeft h2 {
-  margin-bottom: 10px !important;
+  font-size: 22px !important;
+  border-right: 5px solid #40E0D0;
+  padding-right: 14px;
+  position: relative;
+  border-radius: 5px;
+}
+.singleProduct .singleProductLeft h2::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  background-color: #40E0D0;
+  /* top: 0; */
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 4px;
 }
 .singleProduct .singleProductLeft .mostView img {
   width: 100px !important;
@@ -1094,13 +1136,23 @@ select option {
   border-radius: 7px;
 }
 .singleProduct .singleProductLeft .mostView .MostViewTitle h2 {
-  font-size: 20px;
+  font-size: 16px !important;
 }
 .singleProduct .singleProductLeft .mostView .top-product a {
   display: flex;
 }
 .singleProduct .singleProductLeft .mostView .top-product h2 {
   margin: 0;
+  border: none !important;
+  padding: 0 !important;
+}
+.singleProduct .singleProductLeft .mostView .top-product h2::before {
+  content: none;
+}
+.singleProduct .singleProductLeft .mostView .top-product .star-rating {
+  float: none !important;
+  font-size: 12px !important;
+  margin: 7px 0 !important;
 }
 .singleProduct .singleProductLeft .mostView .top-product .product-price {
   display: flex;
@@ -1119,13 +1171,44 @@ select option {
   margin: 0 !important;
 }
 .singleProduct .singleProductLeft .category .woocommerce-loop-category__title {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  border: none !important;
+  color: #7d887b !important;
   display: flex;
   width: -moz-max-content;
   width: max-content;
   margin: 0 !important;
 }
+.singleProduct .singleProductLeft .category .woocommerce-loop-category__title::before {
+  content: none;
+}
 .singleProduct .singleProductLeft .category .woocommerce-loop-category__title mark {
   background-color: transparent;
+  color: #7d887b !important;
+}
+.singleProduct .singleProductLeft .tag ul {
+  padding: 0 !important;
+  display: flex;
+}
+.singleProduct .singleProductLeft .tag ul span {
+  color: #40E0D0 !important;
+  display: inline-block;
+  margin-left: 4px;
+}
+.singleProduct .singleProductLeft .tag a {
+  color: #7d887b !important;
+}
+@media screen and (max-width: 768px) {
+  .singleProduct {
+    flex-direction: column;
+  }
+  .singleProduct .product, .singleProduct .singleProductLeft {
+    width: 100% !important;
+  }
+  .singleProduct .product .woocommerce-product-gallery, .singleProduct .product .entry-summary, .singleProduct .singleProductLeft .woocommerce-product-gallery, .singleProduct .singleProductLeft .entry-summary {
+    width: 100% !important;
+  }
 }
 
 .woocommerce-Reviews-title {
@@ -1185,6 +1268,7 @@ select option {
   border: none;
   display: block;
   padding: 20px;
+  box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.08);
 }
 .woocommerce-Tabs-panel table tr {
   border: none !important;
@@ -1198,6 +1282,14 @@ select option {
   font-style: inherit !important;
   width: -moz-max-content !important;
   width: max-content !important;
+}
+
+.woocommerce-Tabs-panel--additional_information {
+  border-bottom: 5px solid #40E0D0;
+}
+
+.woocommerce-Tabs-panel--reviews {
+  margin-top: 100px !important;
 }
 
 .comment-respond .stars a {

@@ -66,12 +66,30 @@ get_header( 'shop' ); ?>
 											// Output your product information here as needed
 												
 													echo '<h2>' . get_the_title() . '</h2>';
+													global $product;
+
+													// Check if the current page is a product page
+													if (is_product()) {
+														// Get the average rating for the current product
+														$average_rating = $product->get_average_rating();
+														
+														// Output the star rating
+														if ($average_rating > 0) {
+															echo '<div class="star-rating" title="' . sprintf(__('Rated %s out of 5', 'woocommerce'), $average_rating) . '">';
+															echo '<span style="width: ' . ( ( $average_rating / 5 ) * 100 ) . '%;"><strong itemprop="ratingValue" class="rating">' . $average_rating . '</strong> ' . __('out of 5', 'woocommerce') . '</span>';
+															echo '</div>';
+														}
+													}
 													echo '<div class="product-price">' . $product->get_price_html() . '</div>';
+													
+
+													
 													
 													
 												
 											// Add more details as needed
 											?>
+											
 										</div>
 									</a>
 										
@@ -90,18 +108,34 @@ get_header( 'shop' ); ?>
 					<h2>دسته بندی ها:</h2>
 					<?php echo do_shortcode('[product_categories]') ?>
 				</div>
-					<div class="tag">
-						<h2>برچسب ها</h2>
+				<div class="tag">
+					<h2>برچسب ها:</h2>
+					<div class="product-tags">
 						<?php
-						global $product;
-					?>
-						<div class="product-tags">
-							<?php echo wc_get_product_tag_list( $product->get_id(), ', ' ); ?>
-						</div>
-							
+						// Get all product tags
+						$tags = get_terms(array(
+							'taxonomy' => 'product_tag',
+							'hide_empty' => false, // Change to true if you want to hide empty tags
+						));
 
-
+						// Check if there are tags
+						if (!empty($tags)) {
+							echo '<ul>';
+							foreach ($tags as $tag) {
+								echo '<li><a href="' . get_term_link($tag) . '"><span>#</span>' . $tag->name .  ' </a></li>';
+							}
+							echo '</ul>';
+						} else {
+							echo 'No tags found.';
+						}
+						?>
+						
 					</div>
+					
+						
+
+
+				</div>
 			</div>
 		</div>
 
