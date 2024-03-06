@@ -457,7 +457,6 @@
             justify-content: space-between;
             span{
                 width: 49%;
-                margin-top: 20px;
                 @include xs{
                     width: 100%;
                 }
@@ -839,9 +838,9 @@
     }
 }
 .servicePage{
-    input{
-        display: inline-block;
-        width: 49%;
+    width: 60%;
+    h1{
+        text-align: center;
     }
     label{
         margin: 0 !important;
@@ -850,7 +849,25 @@
         display: flex !important;
         width: 50%;
     }
-    .tellTwo , .fNameSomeOne , .lNameSomeOne , .relationship{
-        display: none;
+    h2{
+        font-size: 20px !important;
     }
+    input{
+        &[type=date] , &[type=time]{
+            width: 50%;
+        }
+        &[type=submit]{
+            display: inline-block;
+        }
+    }
+    .formRow{
+        display: flex;
+        justify-content: space-between;
+        input{
+            width: 49%;
+        }
+    }
+    // .tellTwo , .fNameSomeOne , .lNameSomeOne , .relationship{
+    //     display: none;
+    // }
 }
