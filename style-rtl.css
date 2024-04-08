@@ -202,7 +202,7 @@ p {
 }
 
 .colorChangeTxt {
-  color: #40E0D0;
+  color: #009b8c;
 }
 
 .lightText {
@@ -244,7 +244,7 @@ p {
 }
 
 .lighterBorder {
-  border: 1px solid #025D68;
+  border: 1px solid #505050;
 }
 
 button {
@@ -261,7 +261,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  border: 1px solid #025D68;
+  border: 1px solid #505050;
 }
 table th {
   text-align: right;
@@ -299,7 +299,7 @@ li::before {
   width: 6px;
   height: 6px;
   border-radius: 100%;
-  background-color: #40E0D0;
+  background-color: #009b8c;
   top: 0;
   bottom: 0;
   margin-top: auto;
@@ -369,7 +369,7 @@ input[type=submit] {
   width: -moz-max-content !important;
   width: max-content !important;
   font-size: 13px !important;
-  background-color: #40E0D0 !important;
+  background-color: #009b8c !important;
   color: #fff !important;
   padding: 8px 20px !important;
   border-radius: 7px !important;
@@ -449,7 +449,7 @@ select option {
   width: -moz-max-content;
   width: max-content;
   transition: all 0.4s;
-  border: 1px solid #40E0D0;
+  border: 1px solid #009b8c;
   font-weight: 600;
   cursor: pointer;
 }
@@ -458,13 +458,13 @@ select option {
 }
 
 .bgColor {
-  background-color: #40E0D0;
+  background-color: #009b8c;
   color: white !important;
-  border: 1px solid #40E0D0;
+  border: 1px solid #009b8c;
 }
 
 .fillButton {
-  background-color: #40E0D0;
+  background-color: #009b8c;
   color: #fff !important;
   border: none;
 }
@@ -502,7 +502,7 @@ select option {
 }
 
 .lightbg {
-  background-color: #025D68;
+  background-color: #505050;
 }
 
 .show {
@@ -512,7 +512,7 @@ select option {
 .entry-header {
   width: 100%;
   height: 240px;
-  background-color: #025D68;
+  background-color: #505050;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -619,8 +619,8 @@ select option {
   cursor: pointer;
 }
 .singlePageMain .singlePageRightBox .shortendedLinkContainer .mainShortenedInfo input[type=button]:hover {
-  border-right: 3px solid #40E0D0;
-  background-color: #40E0D0;
+  border-right: 3px solid #009b8c;
+  background-color: #009b8c;
   color: #fff;
 }
 @media screen and (max-width: 380px) {
@@ -743,7 +743,7 @@ select option {
 .comments-area .comment-reply-title {
   font-size: 13px;
   font-weight: 700;
-  color: #40E0D0 !important;
+  color: #009b8c !important;
   text-align: center;
   padding: 7px 0;
   margin: 5px 0;
@@ -757,7 +757,7 @@ select option {
 .comments-area .form-submit input[type=submit] {
   font-size: 13px;
   font-weight: 700;
-  background-color: #40E0D0;
+  background-color: #009b8c;
   color: #fff;
   border: none;
   padding: 8px 20px;
@@ -930,7 +930,7 @@ select option {
   }
 }
 .aboutPage .sectionFour {
-  background-color: #025D68;
+  background-color: #505050;
 }
 .aboutPage .sectionFour .innerSectionFour {
   display: flex;
@@ -1056,7 +1056,7 @@ select option {
   display: flex;
 }
 .singleProduct .product .entry-summary .product_meta a {
-  color: #40E0D0;
+  color: #009b8c;
 }
 .singleProduct .product .entry-summary .quantity {
   position: relative;
@@ -1090,7 +1090,7 @@ select option {
   left: 14%;
 }
 .singleProduct .product .entry-summary .single_add_to_cart_button {
-  background-color: #40E0D0 !important;
+  background-color: #009b8c !important;
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.28) !important;
 }
 .singleProduct .star-rating span::before {
@@ -1195,7 +1195,7 @@ select option {
   display: flex;
 }
 .singleProduct .singleProductLeft .tag ul span {
-  color: #40E0D0 !important;
+  color: #009b8c !important;
   display: inline-block;
   margin-left: 4px;
 }
@@ -1288,7 +1288,7 @@ select option {
 }
 
 .woocommerce-Tabs-panel--additional_information {
-  border-bottom: 5px solid #40E0D0;
+  border-bottom: 5px solid #009b8c;
 }
 
 .woocommerce-Tabs-panel--reviews {
@@ -1356,4 +1356,364 @@ select option {
 
 #prevPage1 {
   display: none !important;
+}
+
+.site-header {
+  box-shadow: 6px 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+.site-header .innerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+.site-header .innerHeader .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-header .innerHeader .menu li {
+  padding: 7px 0;
+  margin: 0 25px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.site-header .innerHeader .menu li::before {
+  content: none;
+}
+.site-header .innerHeader .menu li a {
+  transition: 0.3s;
+}
+.site-header .innerHeader .menu li a::before {
+  content: "";
+  position: absolute;
+  background-color: #009b8c;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 70%;
+  height: 2px;
+  transform: translateX(150%);
+  transition: 0.3s;
+}
+.site-header .innerHeader .menu li a:hover::before {
+  transform: translateX(-25%);
+}
+
+footer {
+  background-color: #505050;
+}
+footer a, footer p, footer h3, footer h5, footer span {
+  color: white !important;
+}
+footer h3 {
+  text-align: center;
+  padding-top: 80px;
+}
+footer .formFooter {
+  width: 50%;
+  margin: auto;
+}
+footer .formFooter input[type=email] {
+  border-radius: 30px;
+  background-color: white;
+  text-align: left;
+  padding: 15px 20px;
+}
+footer .formFooter input[type=submit] {
+  border-radius: 30px !important;
+}
+footer .formFooter form {
+  position: relative;
+}
+footer .formFooter form .submit {
+  position: absolute;
+  top: -11px;
+  right: 10px;
+}
+footer .innerFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+footer .innerFooter .sectionOne {
+  width: 30%;
+}
+footer .innerFooter .sectionOne .information {
+  display: flex;
+  margin: 25px 0;
+}
+footer .innerFooter .sectionOne .information span {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer .innerFooter .sectionOne .information svg {
+  margin-left: 10px;
+}
+footer .innerFooter .sectionTwo, footer .innerFooter .sectionThree {
+  width: 13%;
+}
+footer .innerFooter .sectionTwo a, footer .innerFooter .sectionThree a {
+  display: block;
+  margin: 15px 0;
+}
+footer .innerFooter .sectionFour {
+  width: 25%;
+}
+footer .innerFooter .sectionFour .social {
+  display: flex;
+  justify-content: space-between;
+}
+footer .innerFooter .sectionFour a {
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  footer .innerFooter .culumn {
+    width: 50%;
+    text-align: center;
+  }
+  footer .innerFooter .culumn span {
+    text-align: right;
+  }
+  footer .formFooter {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer .innerFooter .culumn {
+    width: 100%;
+  }
+  footer .formFooter {
+    width: 80%;
+  }
+}
+
+.homePageBack .homePage .sectionOne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.homePageBack .homePage .sectionOne .sectionOneImg {
+  width: 45%;
+}
+.homePageBack .homePage .sectionOne .sectionOneText {
+  width: 45%;
+  text-align: center;
+}
+.homePageBack .homePage .sectionOne .sectionOneText h1 {
+  font-size: 25px;
+}
+.homePageBack .homePage .sectionOne .sectionOneText .button {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .homePageBack .homePage .sectionOne {
+    flex-direction: column;
+  }
+  .homePageBack .homePage .sectionOne .sectionOneText, .homePageBack .homePage .sectionOne .sectionOneImg {
+    width: 100%;
+  }
+}
+.homePageBack .homePage .sectionTwo, .homePageBack .homePage .sectionFour {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px auto;
+}
+.homePageBack .homePage .sectionTwo .sectiontwoImg, .homePageBack .homePage .sectionTwo .sectionFourImg, .homePageBack .homePage .sectionFour .sectiontwoImg, .homePageBack .homePage .sectionFour .sectionFourImg {
+  width: 48%;
+}
+.homePageBack .homePage .sectionTwo .sectiontwoImg img, .homePageBack .homePage .sectionTwo .sectionFourImg img, .homePageBack .homePage .sectionFour .sectiontwoImg img, .homePageBack .homePage .sectionFour .sectionFourImg img {
+  border-radius: 20px;
+}
+.homePageBack .homePage .sectionTwo .sectiontwoText, .homePageBack .homePage .sectionTwo .sectionFourText, .homePageBack .homePage .sectionFour .sectiontwoText, .homePageBack .homePage .sectionFour .sectionFourText {
+  width: 45%;
+}
+.homePageBack .homePage .sectionTwo .sectiontwoText span, .homePageBack .homePage .sectionTwo .sectionFourText span, .homePageBack .homePage .sectionFour .sectiontwoText span, .homePageBack .homePage .sectionFour .sectionFourText span {
+  display: flex;
+  align-items: center;
+}
+.homePageBack .homePage .sectionTwo .sectiontwoText span svg, .homePageBack .homePage .sectionTwo .sectionFourText span svg, .homePageBack .homePage .sectionFour .sectiontwoText span svg, .homePageBack .homePage .sectionFour .sectionFourText span svg {
+  margin-left: 5px;
+}
+.homePageBack .homePage .sectionTwo .sectiontwoText a, .homePageBack .homePage .sectionTwo .sectionFourText a, .homePageBack .homePage .sectionFour .sectiontwoText a, .homePageBack .homePage .sectionFour .sectionFourText a {
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .homePageBack .homePage .sectionTwo, .homePageBack .homePage .sectionFour {
+    flex-direction: column;
+  }
+  .homePageBack .homePage .sectionTwo .sectiontwoText, .homePageBack .homePage .sectionTwo .sectiontwoImg, .homePageBack .homePage .sectionTwo .sectionFourText, .homePageBack .homePage .sectionTwo .sectionFourImg, .homePageBack .homePage .sectionFour .sectiontwoText, .homePageBack .homePage .sectionFour .sectiontwoImg, .homePageBack .homePage .sectionFour .sectionFourText, .homePageBack .homePage .sectionFour .sectionFourImg {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.homePageBack .homePage .sectionThree .sectionThreeTitle {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.homePageBack .homePage .sectionThree .sectionThreeCards {
+  display: flex;
+  text-align: center;
+  gap: 100px;
+}
+.homePageBack .homePage .sectionThree .sectionThreeCards .sectionThreeCardsvg {
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  position: relative;
+}
+.homePageBack .homePage .sectionThree .sectionThreeCards .sectionThreeCardsvg .svgParent {
+  background-color: #505050;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homePageBack .homePage .sectionThree .sectionThreeCards .sectionThreeCardsvg span {
+  border: 1px solid black;
+  position: absolute;
+  padding: 12px 20px;
+  border-radius: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: white;
+  top: -10%;
+  right: -16%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .homePageBack .homePage .sectionThree .sectionThreeCards {
+    flex-direction: column;
+  }
+  .homePageBack .homePage .sectionThree .sectionThreeTitle {
+    width: 100%;
+  }
+}
+.homePageBack .homePage .sectionFive .sectionFiveTitle {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.homePageBack .homePage .sectionFive .sectionFiveCards {
+  position: relative;
+}
+.homePageBack .homePage .sectionFive .sectionFiveCards .sectionFiveCard {
+  border: 1px solid #e2e2e2;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.homePageBack .homePage .sectionFive .sectionFiveCards .sectionFiveCard .cardProfile {
+  background-color: #505050;
+  padding: 35px;
+  text-align: center;
+}
+.homePageBack .homePage .sectionFive .sectionFiveCards .sectionFiveCard .cardProfile .svgParent {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+.homePageBack .homePage .sectionFive .sectionFiveCards .sectionFiveCard .cardProfile h4 {
+  color: white !important;
+  margin: 0;
+  margin-top: 10px;
+}
+.homePageBack .homePage .sectionFive .sectionFiveCards .sectionFiveCard .cardText {
+  padding: 0 20px 20px 20px;
+}
+.homePageBack .homePage .sectionFive .sectionFiveCards .sectionFiveCard .cardText span {
+  text-align: center;
+  opacity: 0.4;
+}
+.homePageBack .homePage .sectionFive .sectionFiveCards .sectionFiveCard h5 {
+  font-size: 18px;
+}
+.homePageBack .homePage .sectionFive .swiper-button-next {
+  right: -45px;
+}
+.homePageBack .homePage .sectionFive .swiper-button-next::after {
+  content: none;
+}
+.homePageBack .homePage .sectionFive .swiper-button-prev {
+  left: -45px;
+}
+.homePageBack .homePage .sectionFive .swiper-button-prev::after {
+  content: none;
+}
+@media screen and (max-width: 768px) {
+  .homePageBack .homePage .sectionFive .sectionFiveCards {
+    flex-direction: column;
+  }
+  .homePageBack .homePage .sectionFive .sectionFiveTitle {
+    width: 100%;
+  }
+}
+.homePageBack .homePage .sectionSix {
+  background: wheat;
+  margin: 100px 0;
+}
+.homePageBack .homePage .sectionSix .counterNumbersInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+.homePageBack .homePage .sectionSix .counterNumbersInner .counterItem {
+  text-align: center;
+  margin: 20px 0;
+}
+.homePageBack .homePage .sectionSix .counterNumbersInner .counterItem .counterNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homePageBack .homePage .sectionSix .counterNumbersInner .counterItem .counterNumber span {
+  font-size: 60px;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .homePageBack .homePage .sectionSix .counterNumbersInner .counterItem {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homePageBack .homePage .sectionSix .counterNumbersInner .counterItem {
+    width: 100%;
+  }
+}
+.homePageBack .homePage .sectionSeven .sectionSevenTopTitle {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoImg {
+  width: 40%;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText {
+  width: 55%;
 }/*# sourceMappingURL=style-rtl.css.map */

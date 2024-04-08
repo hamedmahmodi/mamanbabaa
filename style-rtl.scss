@@ -874,3 +874,378 @@
 #prevPage1 {
     display: none !important;
 }
+.site-header{
+    box-shadow: 6px 0 6px 0 rgba(0, 0, 0, 0.3);
+    .innerHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 80px;
+        
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                padding: 7px 0;
+                margin: 0 25px;
+                overflow: hidden;
+                transition: .3s;
+                &::before{
+                    content: none;
+                }
+                a{
+                    transition: .3s;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        background-color: $mainColor;
+                        bottom: 0;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        width: 70%;
+                        height: 2px;
+                        transform: translateX(150%);
+                        transition: .3s;
+                    }
+                    &:hover{
+                        &::before{
+                            transform: translateX(-25%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    background-color: $backColor;
+    a , p , h3 , h5 , span{
+        color: white !important;
+    }
+    h3{
+        text-align: center;
+        padding-top: 80px;
+    }
+    .formFooter{
+        width: 50%;
+        margin: auto;
+        input[type=email]{
+            border-radius: 30px;
+            background-color: white;
+            text-align: left;
+            padding: 15px 20px;
+        }
+        input[type=submit]{
+            border-radius: 30px !important;
+        }
+        form{
+            position: relative;
+            .submit{
+                position: absolute;
+                top: -11px;
+                right: 10px;
+            }
+        }
+    }
+    .innerFooter{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        .sectionOne{
+            width: 30%;
+            .information{
+                display: flex;
+                margin: 25px 0;
+                span{
+                    width: fit-content;
+                }
+                svg{
+                    margin-left: 10px;
+                }
+            }
+        }
+        .sectionTwo,.sectionThree{
+            width: 13%;
+            a{
+                display: block;
+                margin: 15px 0;
+            }
+        }
+        .sectionFour{
+            width: 25%;
+            .social{
+                display: flex;
+                justify-content: space-between;
+            }
+            a{
+                padding: 0;
+            }
+        }
+        
+    }
+    @include sm{
+        .innerFooter{
+            .culumn{
+                width: 50%;
+                text-align: center;
+                span{
+                    text-align: right;
+                }
+            }
+        }
+        .formFooter{
+            width: 70%;
+        }
+    }
+    @include xs{
+        .innerFooter{
+            .culumn{
+                width: 100%;
+            }
+        }
+        .formFooter{
+            width: 80%;
+        }
+    }
+}
+.homePageBack{
+    .homePage{
+        .sectionOne{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            .sectionOneImg{
+                width: 45%;
+            }
+            .sectionOneText{
+                width: 45%;
+                text-align: center;
+                h1{
+                    font-size: 25px;
+
+                }
+                .button{
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                }
+            }
+            @include sm{
+                flex-direction: column;
+                .sectionOneText , .sectionOneImg{
+                    width: 100%;
+                } 
+            }
+        }
+        .sectionTwo , .sectionFour{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 100px auto;
+            .sectiontwoImg , .sectionFourImg{
+                width: 48%;
+                img{
+                    border-radius: 20px;
+                }
+            }
+            .sectiontwoText , .sectionFourText{
+                width: 45%;
+                span{
+                    display: flex;
+                    align-items: center;
+                    svg{
+                        margin-left: 5px;
+                    }
+                }
+                a{
+                    margin-right: auto;
+                }
+            } 
+            @include sm{
+                flex-direction: column;
+                .sectiontwoText , .sectiontwoImg , .sectionFourText , .sectionFourImg{
+                    width: 100%;
+                    margin-bottom: 20px;
+                } 
+            }
+        }
+        .sectionThree{
+            .sectionThreeTitle{
+                text-align: center;
+                width: 70%;
+                margin: auto;
+                margin-bottom: 50px;
+            }
+            .sectionThreeCards{
+                display: flex;
+                text-align: center;
+                gap: 100px;
+                .sectionThreeCardsvg{
+                    width: max-content;
+                    margin: auto;
+                    position: relative;
+                    .svgParent{
+                        background-color: $backColor;
+                        border-radius: 100%;
+                        width: 150px;
+                        height: 150px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    span{
+                        border: 1px solid black;
+                        position: absolute;
+                        padding: 12px 20px;
+                        border-radius: 100%;
+                        font-weight: 700;
+                        font-size: 20px;
+                        background-color: white;
+                        top: -10%;
+                        right: -16%;
+                        width: 60px;
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+            @include sm{
+                .sectionThreeCards{
+                    flex-direction: column;
+                }
+                .sectionThreeTitle{
+                    width: 100%;
+                }
+            }
+        }
+        .sectionFive{
+            .sectionFiveTitle{
+                text-align: center;
+                width: 70%;
+                margin: auto;
+                margin-bottom: 50px;
+            }
+            .sectionFiveCards{
+                // display: flex;
+                // text-align: center;
+                // gap: 40px;
+                position: relative;
+                .sectionFiveCard{
+                    border: 1px solid #e2e2e2;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    .cardProfile{
+                        background-color: $backColor;
+                        padding: 35px;
+                        text-align: center;
+                        .svgParent{
+                            width: 50px;
+                            height: 50px;
+                            margin: auto;
+                            background-color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 100%;
+                        }
+                        h4{
+                            color: white !important;
+                            margin: 0;
+                            margin-top: 10px;
+                        }
+                        
+                    }
+                    .cardText{
+                        padding: 0 20px 20px 20px;
+                        span{
+                            text-align: center;
+                            opacity: .4;
+                        }
+                    }
+                    h5{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .swiper-button-next{
+                // transform: rotate(180deg);
+                right: -45px;
+                &::after{
+                    content: none;
+                }
+            }
+            .swiper-button-prev{
+                left: -45px;
+                &::after{
+                    content: none;
+                }
+            }
+            @include sm{
+                .sectionFiveCards{
+                    flex-direction: column;
+                }
+                .sectionFiveTitle{
+                    width: 100%;
+                }
+            }
+        }
+        .sectionSix{
+            background: wheat;
+            margin: 100px 0;
+            .counterNumbersInner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 50px 0;
+                .counterItem {
+                    text-align: center;
+                    margin: 20px 0;
+                    .counterNumber{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        span{
+                            font-size: 60px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+                @include sm{
+                    .counterItem {
+                        width: 50%;
+                    }
+                }
+                @include xs{
+                    .counterItem {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .sectionSeven{
+            .sectionSevenTopTitle{
+                text-align: center;
+                width: 70%;
+                margin: auto;
+                margin-bottom: 50px;
+            }
+            .sectionSevenMain{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .sectiontwoImg{
+                    width: 40%;
+                }
+                .sectiontwoText{
+                    width: 55%;
+                }
+            }
+        }
+    }
+}
