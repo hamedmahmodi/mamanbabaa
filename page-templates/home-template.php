@@ -197,9 +197,73 @@ get_header();
                     <img src="<?php echo get_template_directory_uri()?>/img/woman-working-call-center-talking-with-clients-using-headphones-microphone.jpg" alt="" width="100%">
                 </div>
                 <div class="sectiontwoText">
-                    
+                    <div class="faqContainer">
+                            <div class="faq">
+                                <div class="faqBoxs">
+                                    <h3 class="question">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h3>
+                                    <span class="svgFaqBack"><svg width="20" height="20" fill="#e25e28" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48H0z" fill="none"/><path d="M24 29.171 9.414 14.585l-2.828 2.828L24 34.827l17.414-17.414-2.828-2.828z"/></svg></span>
+                                </div>
+                                <p class="answer">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده</p>
+                            </div>
+                            <div class="faq">
+                                <div class="faqBoxs">
+                                    <h3 class="question">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h3>
+                                    <span class="svgFaqBack"><svg width="20" height="20" fill="#e25e28" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48H0z" fill="none"/><path d="M24 29.171 9.414 14.585l-2.828 2.828L24 34.827l17.414-17.414-2.828-2.828z"/></svg></span>
+                                </div>
+                                <p class="answer">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده</p>
+                            </div>
+                            <div class="faq">
+                                <div class="faqBoxs">
+                                    <h3 class="question">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h3>
+                                    <span class="svgFaqBack"><svg width="20" height="20" fill="#e25e28" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48H0z" fill="none"/><path d="M24 29.171 9.414 14.585l-2.828 2.828L24 34.827l17.414-17.414-2.828-2.828z"/></svg></span>
+                                </div>
+                                <p class="answer">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده</p>
+                            </div>
+                    </div>
                     <a class="generalButton bgColor" href="#">دکمه تست شماره 2</a>
                 </div>
+            </div>
+        </div>
+        <div class="sectionEight mainView">
+            <div class="sectionSevenTopTitle">
+                <h2>آخرین مقالات وبسایت</h2>
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیا</p>
+            </div>
+            <div class="blogFeaturedContent">
+                <?php
+                    $args = array(
+                        'posts_per_page' => 3, 
+                        'order' => 'DESC',    
+                    );
+
+                    $latest_posts = new WP_Query($args);
+
+                    if ($latest_posts->have_posts()) :
+                        while ($latest_posts->have_posts()) : $latest_posts->the_post();
+                ?>
+                <a href="<?php the_permalink(); ?>" class="latest-post">
+                    <?php the_post_thumbnail('medium'); ?>
+                    <div class="blogText">
+                        <h2 class="post-title"><?php the_title(); ?></h2>
+                        <div class="post-excerpt">
+                            <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
+                        </div>
+                        <div class="blogDetail">
+                            <div class="post-meta">
+                                <span><svg width="15px" height="15px" viewBox="0 0 0.3 0.3" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.025 0.15c0 -0.047 0 -0.071 0.015 -0.085S0.078 0.05 0.125 0.05h0.05c0.047 0 0.071 0 0.085 0.015S0.275 0.103 0.275 0.15v0.025c0 0.047 0 0.071 -0.015 0.085S0.222 0.275 0.175 0.275h-0.05c-0.047 0 -0.071 0 -0.085 -0.015S0.025 0.222 0.025 0.175z" stroke="#1C274C" stroke-width="0.018750000000000003"/><path d="M0.088 0.05V0.031" stroke="#1C274C" stroke-width="0.018750000000000003" stroke-linecap="round"/><path d="M0.213 0.05V0.031" stroke="#1C274C" stroke-width="0.018750000000000003" stroke-linecap="round"/><path d="m0.113 0.181 0.019 -0.019v0.05" stroke="#1C274C" stroke-width="0.018750000000000003" stroke-linecap="round" stroke-linejoin="round"/><path d="M0.163 0.2v-0.025a0.013 0.013 0 1 1 0.025 0v0.025a0.013 0.013 0 1 1 -0.025 0Z" stroke="#1C274C" stroke-width="0.018750000000000003" stroke-linecap="round"/><path d="M0.031 0.113h0.238" stroke="#1C274C" stroke-width="0.018750000000000003" stroke-linecap="round"/></svg> منتشر شده در <?php echo get_the_date(); ?></span>
+                            </div>
+                            <span class="read-more generalButton">ادامه مطلب</span>
+                        </div>
+                    </div>
+                </a>
+                <?php
+                    endwhile;
+                    wp_reset_postdata(); // بازنشانی اطلاعات پست
+                else :
+                    echo 'پستی یافت نشد';
+                endif;
+                ?>
+
             </div>
         </div>
     </div>

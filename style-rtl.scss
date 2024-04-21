@@ -364,87 +364,185 @@
     }
 }
 .aboutPage{
-    
-    text-align: center;
     .sectionOne{
-        margin: 50px 100px;
-        p{
-            width: 65%;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 20px;
-        }
-        @include xs{
-            img{
-                width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0;
+        .sectionOneText{
+            width: 50%;
+            .skills{
+                a{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    svg{
+                        margin-left: 7px;
+                    }
+                }
             }
-            p{
-                width: 85%;
+        }
+        .sectionOneImg{
+            width: 40%;
+        }
+        @include sm{
+            flex-direction: column;
+            .sectionOneText{
+                width: 100%;
+            }
+            .sectionOneImg{
+                width: 100%;
             }
         }
     }
-    .sectionTwo{
-        background-color: #FFFFFF;
-        background-image: url(https://absolutecarehealth.com.au/wp-content/uploads/2023/03/Community-engagement-cover.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 150px 0px 150px 0px;
-        .sectionTwoText{
-            width: 50%;
-            background-color: #FFFFFFC7;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-            padding: 35px 35px 35px 35px;
-            text-align: right;
-            @include sm{
-                width: 70%;
-            }
-            @include xs{
-                width: 100%;
-            }
+    .sectiontwo{
+        .sectiontwoMain{
+            display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .sectiontwoImg {
+                    width: 48%;
+                    img{
+                        border-radius: 20px;
+                    }
+                }
+                .sectiontwoText{
+                    width: 45%;
+                    span{
+                        display: flex;
+                        align-items: center;
+                        svg{
+                            margin-left: 5px;
+                        }
+                    }
+                    a{
+                        margin-right: auto;
+                    }
+                } 
+                @include sm{
+                    flex-direction: column;
+                    margin: 50px auto;
+                    .sectiontwoText , .sectiontwoImg , .sectionFourText , .sectionFourImg{
+                        width: 100%;
+                        margin-bottom: 20px;
+                    } 
+                }
         }
     }
     .sectionThree{
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        margin: 100px auto;
-        .sectionThreeText,.sectionThreeImg{
-            width: 50%;
-            padding: 10px;
-            text-align: right;
+        margin: 50px 0;
+        .sectionThreeText{
+            width: 48%;
+        }
+        .sectionThreeCards{
+            width: 45%;
+            .sectionThreeCard{
+                background-color: $backColor;
+                padding: 20px;
+                margin: 20px 0;
+                padding-right: 60px;
+                position: relative;
+                border-radius: 20px;
+                h3 , p{
+                    color: white !important;
+                    margin: 0;
+                }
+
+                .svgParent{
+                    position: absolute;
+                    width: 80px;
+                    height: 80px;
+                    right: -40px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: $backColor;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    svg{
+                        margin: auto;
+                    }
+                }
+            }
+            .sectionThreeCardTwo{
+                transform: translateX(-30px);
+            }
         }
         @include sm{
             flex-direction: column;
-            .sectionThreeText,.sectionThreeImg{
+            .sectionThreeText{
+                width: 100%;
+            }
+            .sectionThreeCards{
+                width: 92%;
+                margin-right: auto;
+                .sectionThreeCardTwo{
+                    transform: translateX(0px);
+                }
+            }  
+        }
+    }
+    .sectionFour{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .counterNumbersInner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px 0;
+            width: 45%;
+            .counterItem {
+                text-align: center;
+                margin: 20px 0;
+                width: 50%;
+                .counterNumber{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    span{
+                        font-size: 60px;
+                        font-weight: 600;
+                    }
+                }
+            }
+            @include xs{
+                .counterItem {
+                    width: 100%;
+                }
+            }
+        }
+        .sectionFourText{
+            width: 48%;
+        }
+        @include sm{
+            flex-direction: column;
+            .counterNumbersInner{
+                width: 100%;
+            }
+            .sectionFourText{
                 width: 100%;
             }
         }
     }
-    .sectionFour{
-        background-color: $backColor;
-        .innerSectionFour{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 50px 0px 50px 0px;
-            h2{
-                color: white !important;
-                width: 45%;
-                text-align: right;
-            }
-            @include xs{
-                flex-direction: column;
-                h2{
-                    text-align: center;
-                    width: 80%;
-                }
-            }
-        }
+    
+}
+.TopTitle{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px;
+    @include sm{
+         width: 100%;
     }
 }
 .contactPage{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
     p{
         margin-top: 20px;
         margin-bottom: 0;
@@ -874,6 +972,48 @@
 #prevPage1 {
     display: none !important;
 }
+.mobilMenuOverlay{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+}
+.mobileMenuContainer{
+    position: fixed;
+    right: -350px;
+    background-color: #fff;
+    top: 0px;
+    bottom: 0;
+    height: auto;
+    width: 280px;
+    z-index: 9999999991;
+    transition: all 0.4s;
+    padding: 20px;
+    .menu{
+        padding: 0;
+    }
+    li::before{
+        content: none;
+    }
+    .mobileMenuHeader{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.showMobilMenuOverlay{
+    opacity: 1;
+    visibility: visible;
+}
+.showMobileMenu{
+    right: 0 !important;
+}
 .site-header{
     box-shadow: 6px 0 6px 0 rgba(0, 0, 0, 0.3);
     .innerHeader{
@@ -915,8 +1055,42 @@
                     }
                 }
             }
+            
+        }
+        .headerMobileMenu{
+            display: none;
+            svg{
+                fill: $mainColor;
+            }
+        }
+        @include sm{
+            .menu{
+                display: none;
+            }
+            .generalButton {
+                display: none;
+            }
+            .headerMobileMenu{
+                display: inline;
+            }
+            // display: none;
         }
     }
+    .innerHeaderSticky{
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -100px;
+        transition: all 0.5s;
+        z-index: 999999999;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border-bottom: 1px solid #eeeeee !important;
+        background-color: white;
+    }
+}
+.showStickyHeader{
+    top: 0 !important;
 }
 footer{
     background-color: $backColor;
@@ -1066,6 +1240,7 @@ footer{
             } 
             @include sm{
                 flex-direction: column;
+                margin: 50px auto;
                 .sectiontwoText , .sectiontwoImg , .sectionFourText , .sectionFourImg{
                     width: 100%;
                     margin-bottom: 20px;
@@ -1117,6 +1292,7 @@ footer{
             @include sm{
                 .sectionThreeCards{
                     flex-direction: column;
+                    gap: 50px;
                 }
                 .sectionThreeTitle{
                     width: 100%;
@@ -1134,6 +1310,8 @@ footer{
                 // display: flex;
                 // text-align: center;
                 // gap: 40px;
+                padding: 0 20px;
+                
                 position: relative;
                 .sectionFiveCard{
                     border: 1px solid #e2e2e2;
@@ -1174,23 +1352,31 @@ footer{
             }
             .swiper-button-next{
                 // transform: rotate(180deg);
-                right: -45px;
+                right: -15px;
                 &::after{
                     content: none;
                 }
             }
             .swiper-button-prev{
-                left: -45px;
+                left: -15px;
                 &::after{
                     content: none;
                 }
             }
             @include sm{
-                .sectionFiveCards{
-                    flex-direction: column;
-                }
+                
                 .sectionFiveTitle{
                     width: 100%;
+                }
+                
+            }
+            @include md{
+                .swiper-button-next{
+                    right: -8px;
+
+                }
+                .swiper-button-prev{
+                    left: -8px;
                 }
             }
         }
@@ -1227,23 +1413,140 @@ footer{
                     }
                 }
             }
+            @include sm{
+                margin: 50px 0;
+            }
         }
-        .sectionSeven{
+        .sectionSeven , .sectionEight{
             .sectionSevenTopTitle{
                 text-align: center;
                 width: 70%;
                 margin: auto;
                 margin-bottom: 50px;
+                @include sm{
+                    width: 100%;
+                }
             }
             .sectionSevenMain{
                 display: flex;
-                align-items: center;
+                // align-items: center;
                 justify-content: space-between;
                 .sectiontwoImg{
                     width: 40%;
+                    img{
+                        border-radius: 20px;
+                    }
                 }
                 .sectiontwoText{
                     width: 55%;
+                    .faqContainer{
+                        .answer{
+                            display: none;
+                            margin-top: 20px;
+                        }
+                        .faq {
+                            border-bottom: 1px solid rgb(0 0 0 / 11%);
+                            // margin-bottom: 20px;
+                            padding: 20px 12px;
+                            transition: all .4s;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                        .faq.active{
+
+                        }
+                        .faqBoxs {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            h3.question{
+                                font-size: 18px;
+                                font-weight: 700;
+                                margin: 0;
+                            }
+                            svg{
+                                transition: all .5s;
+                                fill: black !important;
+                            }
+                        }
+                    }
+                    .generalButton {
+                        margin-top: 20px;
+                        float: left;
+                    }
+                }
+                @include sm{
+                    flex-direction: column;
+                    .sectiontwoText , .sectiontwoImg{
+                        width: 100%;
+                        margin-bottom: 20px;
+                    } 
+                }
+            }
+            
+        }
+        .sectionEight{
+            margin: 100px 0;
+            .blogFeaturedContent{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                // gap: 40px;
+                .latest-post{
+                    width: 30%;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    border: 1px solid rgb(0 0 0 / 11%);
+                    img{
+                        width: 100%;
+                    }
+                    h2{
+                        font-size: 22px;
+                    }
+                    .blogText{
+                        padding: 0 20px 20px 20px;
+                        .blogDetail{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 20px;
+                            align-items: center;
+                            .post-meta{
+                                width: max-content;
+                                height: max-content;
+                                span{
+                                    color: #cacaca;
+                                    font-size: 13px;
+                                    display: flex;
+                                    align-items: center;
+                                    svg{
+                                        margin-left: 5px;
+                                        path{
+                                            stroke: #cacaca;
+                                        }
+                                    }
+                                }
+                            }
+                            .read-more{
+                                width: max-content;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            @include sm{
+                margin: 50px 0;
+                .blogFeaturedContent{
+                    gap: 20px 0;
+                    .latest-post{
+                        width: 48%;
+                    }
+                }
+                
+            }
+            @include xs{
+                .latest-post{
+                    width: 100% !important;
                 }
             }
         }

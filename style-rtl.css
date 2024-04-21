@@ -867,97 +867,189 @@ select option {
   margin-left: 5px;
 }
 
-.aboutPage {
-  text-align: center;
-}
 .aboutPage .sectionOne {
-  margin: 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
 }
-.aboutPage .sectionOne p {
-  width: 65%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 20px;
-}
-@media screen and (max-width: 480px) {
-  .aboutPage .sectionOne img {
-    width: 100% !important;
-  }
-  .aboutPage .sectionOne p {
-    width: 85%;
-  }
-}
-.aboutPage .sectionTwo {
-  background-color: #FFFFFF;
-  background-image: url(https://absolutecarehealth.com.au/wp-content/uploads/2023/03/Community-engagement-cover.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 150px 0px 150px 0px;
-}
-.aboutPage .sectionTwo .sectionTwoText {
+.aboutPage .sectionOne .sectionOneText {
   width: 50%;
-  background-color: rgba(255, 255, 255, 0.7803921569);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  padding: 35px 35px 35px 35px;
-  text-align: right;
+}
+.aboutPage .sectionOne .sectionOneText .skills a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.aboutPage .sectionOne .sectionOneText .skills a svg {
+  margin-left: 7px;
+}
+.aboutPage .sectionOne .sectionOneImg {
+  width: 40%;
 }
 @media screen and (max-width: 768px) {
-  .aboutPage .sectionTwo .sectionTwoText {
-    width: 70%;
+  .aboutPage .sectionOne {
+    flex-direction: column;
+  }
+  .aboutPage .sectionOne .sectionOneText {
+    width: 100%;
+  }
+  .aboutPage .sectionOne .sectionOneImg {
+    width: 100%;
   }
 }
-@media screen and (max-width: 480px) {
-  .aboutPage .sectionTwo .sectionTwoText {
+.aboutPage .sectiontwo .sectiontwoMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutPage .sectiontwo .sectiontwoMain .sectiontwoImg {
+  width: 48%;
+}
+.aboutPage .sectiontwo .sectiontwoMain .sectiontwoImg img {
+  border-radius: 20px;
+}
+.aboutPage .sectiontwo .sectiontwoMain .sectiontwoText {
+  width: 45%;
+}
+.aboutPage .sectiontwo .sectiontwoMain .sectiontwoText span {
+  display: flex;
+  align-items: center;
+}
+.aboutPage .sectiontwo .sectiontwoMain .sectiontwoText span svg {
+  margin-left: 5px;
+}
+.aboutPage .sectiontwo .sectiontwoMain .sectiontwoText a {
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .aboutPage .sectiontwo .sectiontwoMain {
+    flex-direction: column;
+    margin: 50px auto;
+  }
+  .aboutPage .sectiontwo .sectiontwoMain .sectiontwoText, .aboutPage .sectiontwo .sectiontwoMain .sectiontwoImg, .aboutPage .sectiontwo .sectiontwoMain .sectionFourText, .aboutPage .sectiontwo .sectiontwoMain .sectionFourImg {
     width: 100%;
+    margin-bottom: 20px;
   }
 }
 .aboutPage .sectionThree {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 100px auto;
+  margin: 50px 0;
 }
-.aboutPage .sectionThree .sectionThreeText, .aboutPage .sectionThree .sectionThreeImg {
-  width: 50%;
-  padding: 10px;
-  text-align: right;
+.aboutPage .sectionThree .sectionThreeText {
+  width: 48%;
+}
+.aboutPage .sectionThree .sectionThreeCards {
+  width: 45%;
+}
+.aboutPage .sectionThree .sectionThreeCards .sectionThreeCard {
+  background-color: #505050;
+  padding: 20px;
+  margin: 20px 0;
+  padding-right: 60px;
+  position: relative;
+  border-radius: 20px;
+}
+.aboutPage .sectionThree .sectionThreeCards .sectionThreeCard h3, .aboutPage .sectionThree .sectionThreeCards .sectionThreeCard p {
+  color: white !important;
+  margin: 0;
+}
+.aboutPage .sectionThree .sectionThreeCards .sectionThreeCard .svgParent {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #505050;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.aboutPage .sectionThree .sectionThreeCards .sectionThreeCard .svgParent svg {
+  margin: auto;
+}
+.aboutPage .sectionThree .sectionThreeCards .sectionThreeCardTwo {
+  transform: translateX(-30px);
 }
 @media screen and (max-width: 768px) {
   .aboutPage .sectionThree {
     flex-direction: column;
   }
-  .aboutPage .sectionThree .sectionThreeText, .aboutPage .sectionThree .sectionThreeImg {
+  .aboutPage .sectionThree .sectionThreeText {
     width: 100%;
+  }
+  .aboutPage .sectionThree .sectionThreeCards {
+    width: 92%;
+    margin-right: auto;
+  }
+  .aboutPage .sectionThree .sectionThreeCards .sectionThreeCardTwo {
+    transform: translateX(0px);
   }
 }
 .aboutPage .sectionFour {
-  background-color: #505050;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.aboutPage .sectionFour .innerSectionFour {
+.aboutPage .sectionFour .counterNumbersInner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0px 50px 0px;
-}
-.aboutPage .sectionFour .innerSectionFour h2 {
-  color: white !important;
+  flex-wrap: wrap;
+  padding: 50px 0;
   width: 45%;
-  text-align: right;
+}
+.aboutPage .sectionFour .counterNumbersInner .counterItem {
+  text-align: center;
+  margin: 20px 0;
+  width: 50%;
+}
+.aboutPage .sectionFour .counterNumbersInner .counterItem .counterNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutPage .sectionFour .counterNumbersInner .counterItem .counterNumber span {
+  font-size: 60px;
+  font-weight: 600;
 }
 @media screen and (max-width: 480px) {
-  .aboutPage .sectionFour .innerSectionFour {
+  .aboutPage .sectionFour .counterNumbersInner .counterItem {
+    width: 100%;
+  }
+}
+.aboutPage .sectionFour .sectionFourText {
+  width: 48%;
+}
+@media screen and (max-width: 768px) {
+  .aboutPage .sectionFour {
     flex-direction: column;
   }
-  .aboutPage .sectionFour .innerSectionFour h2 {
-    text-align: center;
-    width: 80%;
+  .aboutPage .sectionFour .counterNumbersInner {
+    width: 100%;
+  }
+  .aboutPage .sectionFour .sectionFourText {
+    width: 100%;
   }
 }
 
-.contactPage {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+.TopTitle {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
 }
+@media screen and (max-width: 768px) {
+  .TopTitle {
+    width: 100%;
+  }
+}
+
 .contactPage p {
   margin-top: 20px;
   margin-bottom: 0;
@@ -1358,6 +1450,52 @@ select option {
   display: none !important;
 }
 
+.mobilMenuOverlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999999999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+
+.mobileMenuContainer {
+  position: fixed;
+  right: -350px;
+  background-color: #fff;
+  top: 0px;
+  bottom: 0;
+  height: auto;
+  width: 280px;
+  z-index: 9999999991;
+  transition: all 0.4s;
+  padding: 20px;
+}
+.mobileMenuContainer .menu {
+  padding: 0;
+}
+.mobileMenuContainer li::before {
+  content: none;
+}
+.mobileMenuContainer .mobileMenuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.showMobilMenuOverlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.showMobileMenu {
+  right: 0 !important;
+}
+
 .site-header {
   box-shadow: 6px 0 6px 0 rgba(0, 0, 0, 0.3);
 }
@@ -1398,6 +1536,39 @@ select option {
 }
 .site-header .innerHeader .menu li a:hover::before {
   transform: translateX(-25%);
+}
+.site-header .innerHeader .headerMobileMenu {
+  display: none;
+}
+.site-header .innerHeader .headerMobileMenu svg {
+  fill: #009b8c;
+}
+@media screen and (max-width: 768px) {
+  .site-header .innerHeader .menu {
+    display: none;
+  }
+  .site-header .innerHeader .generalButton {
+    display: none;
+  }
+  .site-header .innerHeader .headerMobileMenu {
+    display: inline;
+  }
+}
+.site-header .innerHeaderSticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -100px;
+  transition: all 0.5s;
+  z-index: 999999999;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-bottom: 1px solid #eeeeee !important;
+  background-color: white;
+}
+
+.showStickyHeader {
+  top: 0 !important;
 }
 
 footer {
@@ -1546,6 +1717,7 @@ footer .innerFooter .sectionFour a {
 @media screen and (max-width: 768px) {
   .homePageBack .homePage .sectionTwo, .homePageBack .homePage .sectionFour {
     flex-direction: column;
+    margin: 50px auto;
   }
   .homePageBack .homePage .sectionTwo .sectiontwoText, .homePageBack .homePage .sectionTwo .sectiontwoImg, .homePageBack .homePage .sectionTwo .sectionFourText, .homePageBack .homePage .sectionTwo .sectionFourImg, .homePageBack .homePage .sectionFour .sectiontwoText, .homePageBack .homePage .sectionFour .sectiontwoImg, .homePageBack .homePage .sectionFour .sectionFourText, .homePageBack .homePage .sectionFour .sectionFourImg {
     width: 100%;
@@ -1597,6 +1769,7 @@ footer .innerFooter .sectionFour a {
 @media screen and (max-width: 768px) {
   .homePageBack .homePage .sectionThree .sectionThreeCards {
     flex-direction: column;
+    gap: 50px;
   }
   .homePageBack .homePage .sectionThree .sectionThreeTitle {
     width: 100%;
@@ -1609,6 +1782,7 @@ footer .innerFooter .sectionFour a {
   margin-bottom: 50px;
 }
 .homePageBack .homePage .sectionFive .sectionFiveCards {
+  padding: 0 20px;
   position: relative;
 }
 .homePageBack .homePage .sectionFive .sectionFiveCards .sectionFiveCard {
@@ -1647,23 +1821,28 @@ footer .innerFooter .sectionFour a {
   font-size: 18px;
 }
 .homePageBack .homePage .sectionFive .swiper-button-next {
-  right: -45px;
+  right: -15px;
 }
 .homePageBack .homePage .sectionFive .swiper-button-next::after {
   content: none;
 }
 .homePageBack .homePage .sectionFive .swiper-button-prev {
-  left: -45px;
+  left: -15px;
 }
 .homePageBack .homePage .sectionFive .swiper-button-prev::after {
   content: none;
 }
 @media screen and (max-width: 768px) {
-  .homePageBack .homePage .sectionFive .sectionFiveCards {
-    flex-direction: column;
-  }
   .homePageBack .homePage .sectionFive .sectionFiveTitle {
     width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .homePageBack .homePage .sectionFive .swiper-button-next {
+    right: -8px;
+  }
+  .homePageBack .homePage .sectionFive .swiper-button-prev {
+    left: -8px;
   }
 }
 .homePageBack .homePage .sectionSix {
@@ -1700,20 +1879,137 @@ footer .innerFooter .sectionFour a {
     width: 100%;
   }
 }
-.homePageBack .homePage .sectionSeven .sectionSevenTopTitle {
+@media screen and (max-width: 768px) {
+  .homePageBack .homePage .sectionSix {
+    margin: 50px 0;
+  }
+}
+.homePageBack .homePage .sectionSeven .sectionSevenTopTitle, .homePageBack .homePage .sectionEight .sectionSevenTopTitle {
   text-align: center;
   width: 70%;
   margin: auto;
   margin-bottom: 50px;
 }
-.homePageBack .homePage .sectionSeven .sectionSevenMain {
+@media screen and (max-width: 768px) {
+  .homePageBack .homePage .sectionSeven .sectionSevenTopTitle, .homePageBack .homePage .sectionEight .sectionSevenTopTitle {
+    width: 100%;
+  }
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain, .homePageBack .homePage .sectionEight .sectionSevenMain {
+  display: flex;
+  justify-content: space-between;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoImg, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoImg {
+  width: 40%;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoImg img, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoImg img {
+  border-radius: 20px;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoText {
+  width: 55%;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText .faqContainer .answer, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoText .faqContainer .answer {
+  display: none;
+  margin-top: 20px;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText .faqContainer .faq, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoText .faqContainer .faq {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+  padding: 20px 12px;
+  transition: all 0.4s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText .faqContainer .faqBoxs, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoText .faqContainer .faqBoxs {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoImg {
-  width: 40%;
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText .faqContainer .faqBoxs h3.question, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoText .faqContainer .faqBoxs h3.question {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
 }
-.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText {
-  width: 55%;
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText .faqContainer .faqBoxs svg, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoText .faqContainer .faqBoxs svg {
+  transition: all 0.5s;
+  fill: black !important;
+}
+.homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText .generalButton, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoText .generalButton {
+  margin-top: 20px;
+  float: left;
+}
+@media screen and (max-width: 768px) {
+  .homePageBack .homePage .sectionSeven .sectionSevenMain, .homePageBack .homePage .sectionEight .sectionSevenMain {
+    flex-direction: column;
+  }
+  .homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoText, .homePageBack .homePage .sectionSeven .sectionSevenMain .sectiontwoImg, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoText, .homePageBack .homePage .sectionEight .sectionSevenMain .sectiontwoImg {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.homePageBack .homePage .sectionEight {
+  margin: 100px 0;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post {
+  width: 30%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post img {
+  width: 100%;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post h2 {
+  font-size: 22px;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post .blogText {
+  padding: 0 20px 20px 20px;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post .blogText .blogDetail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post .blogText .blogDetail .post-meta {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post .blogText .blogDetail .post-meta span {
+  color: #cacaca;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post .blogText .blogDetail .post-meta span svg {
+  margin-left: 5px;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post .blogText .blogDetail .post-meta span svg path {
+  stroke: #cacaca;
+}
+.homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post .blogText .blogDetail .read-more {
+  width: -moz-max-content;
+  width: max-content;
+}
+@media screen and (max-width: 768px) {
+  .homePageBack .homePage .sectionEight {
+    margin: 50px 0;
+  }
+  .homePageBack .homePage .sectionEight .blogFeaturedContent {
+    gap: 20px 0;
+  }
+  .homePageBack .homePage .sectionEight .blogFeaturedContent .latest-post {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homePageBack .homePage .sectionEight .latest-post {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=style-rtl.css.map */
