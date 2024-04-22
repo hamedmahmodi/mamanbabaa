@@ -89,6 +89,7 @@
             margin-top: 10px;
             font-size: 0;
             padding-right: 0;
+            position: relative;
             @include xxs{
                 padding: 0;
             }
@@ -151,46 +152,43 @@
         .copyLinkMessage{
             font-size: 13px;
             position: absolute;
-            right: 432px;
+            right: 0;
+            width: -moz-max-content;
             width: max-content;
             background-color: #e1efff;
             padding: 5px 10px;
             margin-top: auto;
             margin-bottom: auto;
-            bottom: 75px;
+            bottom: -22px;
+            height: -moz-max-content;
             height: max-content;
             color: #3e4751;
             display: none;
-            &::before{
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                border-top: 5px solid transparent;
-                border-bottom: 5px solid transparent;
-                border-left: 8px solid #e1efff;
-                left: 100%;
-                top: 0;
-                bottom: 0;
-                margin-top: auto;
-                margin-bottom: auto;
-                @include sm{
-                    border-left: 5px solid transparent;
-                    border-right: 5px solid transparent;
-                    border-top: 8px solid #e1efff;
-                    top: 100%;
-                    left: 0;
-                    right: 0;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-            @include sm{
-                right: auto;
-                left: 0;
-                top: auto;
-                bottom: calc(100% + 15px);
-            }
+            // &::before{
+            //     content: '';
+            //     position: absolute;
+            //     width: 0;
+            //     height: 0;
+            //     border-top: 5px solid transparent;
+            //     border-bottom: 5px solid transparent;
+            //     border-left: 8px solid #e1efff;
+            //     left: 100%;
+            //     top: 0;
+            //     bottom: 0;
+            //     margin-top: auto;
+            //     margin-bottom: auto;
+            //     @include sm{
+            //         border-left: 5px solid transparent;
+            //         border-right: 5px solid transparent;
+            //         border-top: 8px solid #e1efff;
+            //         top: 100%;
+            //         left: 0;
+            //         right: 0;
+            //         margin-left: auto;
+            //         margin-right: auto;
+            //     }
+            // }
+
         }
     }
     .singlePageLeftBox{
