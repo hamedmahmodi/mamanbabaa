@@ -29,6 +29,15 @@ function stepCounter(elementSelector , currentNumber ,endNumber , stepNumber , t
 }
 
 $(document).ready(function(){
+    $('a[href^="#comments"]').on('click', function(event) {
+        event.preventDefault();
+        var target = $(this.hash);
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1100);
+        }
+    });
 
     $(window).on('scroll' , function(){
         if($(document).scrollTop() >= 120){
@@ -124,3 +133,19 @@ $(document).ready(function(){
     });
     
 });
+
+let currentUrl = window.location.href;
+
+    $('.itemsCatParent').each(function() {
+
+        let categoryUrl = $(this).attr('href');
+
+        if (currentUrl === categoryUrl) {
+
+        $(this).addClass('activeCategory');
+
+        return false;
+
+        }
+
+    });

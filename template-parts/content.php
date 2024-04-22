@@ -37,6 +37,19 @@
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 				endif;
+				the_post_thumbnail();
+		
+				if (has_category()) {
+				$categories = get_the_category();
+				?>
+				<div class="postCategories">
+					<span>دسته بندی ها:</span>
+					<?php foreach ($categories as $category) { ?>
+					<?php $category_link = get_category_link($category->term_id); ?>
+					<a class="generalButton" href="<?php echo esc_url($category_link); ?>"><?php echo esc_html($category->name); ?></a>
+					<?php } ?>
+				</div>
+				<?php }
 
 				if ( 'post' === get_post_type() ) :
 

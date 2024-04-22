@@ -112,7 +112,7 @@ p{
 	line-height: 27px;
 	color: $textColorLighter;
 	margin-top: 0;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 .justified{
 	text-align: justify;
@@ -195,15 +195,15 @@ a,a:visited{
 }
 li{
 	list-style-type: none;
-	margin: 7px 0;
+	margin: 15px 0;
 	position: relative;
-	padding-right: 10px;
+	padding-right: 20px;
 	&::before{
 		content: '';
 		position: absolute;
-		width: 6px;
-		height: 6px;
-		border-radius: 100%;
+		width: 10px;
+		height: 10px;
+		border-radius: 3px;
 		background-color: $mainColor;
 		top: 0;
 		bottom: 0;
@@ -237,10 +237,11 @@ input{
 		font-size: 14px;
 		border-bottom: 1px solid $textColorDarker;
 		direction: rtl !important;
-		background-color: #EDEDED;
+		background-color: white;
 		border: none;
-		border-radius: 8px;
-		margin-top: 20px;
+		border-radius: 15px;
+		margin-top: 5px;
+		border: 1px solid #9b9b9b;
 		@include placeholder{
 			color: $textColorLighter;
 			opacity: 1;
@@ -255,16 +256,16 @@ input{
 		cursor: pointer !important;
 		transition: all 0.4s !important;
 		font-family: "yekanbakhweb" !important;
-		width: max-content !important;
+		width: 100% !important;
 		font-size: 13px !important;
 		background-color: $mainColor !important;
 		color: #fff !important;
 		padding: 8px 20px !important;
-		border-radius: 7px !important;
+		border-radius: 15px !important;
 		border: none !important;
 		margin-top: 20px !important;
 		&:hover{
-			transform: scale(1.1) !important;
+			// transform: scale(1.1) !important;
 		}
 	}
 	&:focus{
@@ -289,9 +290,10 @@ textarea{
 		font-size: 14px;
 		border-bottom: 1px solid $textColorDarker;
 		direction: rtl !important;
-		background-color: #EDEDED;
+		background-color: white;
 		border: none;
-		border-radius: 8px;
+		border-radius: 15px;
+		border: 1px solid #9b9b9b;
 	@include placeholder{
 		color: $textColorLighter;
 		opacity: 1;

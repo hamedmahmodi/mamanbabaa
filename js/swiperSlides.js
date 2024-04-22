@@ -62,4 +62,47 @@ var swiper = new Swiper(".mySwiper", {
             },
           },
 });
+var blogSwiper = new Swiper(".blogSwiper", {
+  slidesPerView: 6,
+  // centeredSlides: true,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    // disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+            0: {
+              slidesPerView: 1,  
+              spaceBetween: 0,
+            },
+            380: {
+              slidesPerView: 2,  
+              spaceBetween: 0,
+            },
+            600: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+            1200: {
+              slidesPerView: 6,
+              spaceBetween: 30,
+            },
+          },
+});
 
