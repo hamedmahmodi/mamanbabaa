@@ -126,7 +126,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
         if($(document).scrollTop() > 130){
             $('.mainDesctopHeaderContainerSticky').addClass("topZero");
-            console.log("ok");
+
         }else{
             $('.mainDesctopHeaderContainerSticky').removeClass("topZero");
         };

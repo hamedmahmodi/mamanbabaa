@@ -251,12 +251,15 @@ input{
 		width: max-content;
 		margin: 0;
 	}
+	&[type=radio]{
+		width: max-content;
+	}
 	&[type=submit]{
 		font-weight: 600 !important;
 		cursor: pointer !important;
 		transition: all 0.4s !important;
 		font-family: "yekanbakhweb" !important;
-		width: 100% !important;
+		width: 100%;
 		font-size: 13px !important;
 		background-color: $mainColor !important;
 		color: #fff !important;

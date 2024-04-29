@@ -1840,3 +1840,16 @@ footer.site-footer{
         }
     }
 }
+.leftSubmit{
+    width: max-content !important;
+    margin-right: auto;
+    display: block !important;
+}
+.buttonSubmit{
+    display: flex;
+    justify-content: space-between;
+    .rightSubmit,.leftSubmit,.submit{
+        width: max-content !important;
+        display: unset !important;
+    }
+}

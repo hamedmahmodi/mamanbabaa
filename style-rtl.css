@@ -362,12 +362,16 @@ input[type=checkbox] {
   width: max-content;
   margin: 0;
 }
+input[type=radio] {
+  width: -moz-max-content;
+  width: max-content;
+}
 input[type=submit] {
   font-weight: 600 !important;
   cursor: pointer !important;
   transition: all 0.4s !important;
   font-family: "yekanbakhweb" !important;
-  width: 100% !important;
+  width: 100%;
   font-size: 13px !important;
   background-color: #009b8c !important;
   color: #fff !important;
@@ -2232,4 +2236,21 @@ footer.site-footer .innerFooter .sectionFour {
 }
 .woocommerce-Reviews .comment-respond input[type=submit] {
   font-size: 18px !important;
+}
+
+.leftSubmit {
+  width: -moz-max-content !important;
+  width: max-content !important;
+  margin-right: auto;
+  display: block !important;
+}
+
+.buttonSubmit {
+  display: flex;
+  justify-content: space-between;
+}
+.buttonSubmit .rightSubmit, .buttonSubmit .leftSubmit, .buttonSubmit .submit {
+  width: -moz-max-content !important;
+  width: max-content !important;
+  display: unset !important;
 }/*# sourceMappingURL=style-rtl.css.map */
